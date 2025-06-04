@@ -1,8 +1,8 @@
 ---
-import '@skele/styles/skele.css';
-import { z } from 'zod/v4';
+import "@skele/styles/skele.css";
+import { z } from "zod/v4";
 const baseLayoutSchema = z.object({
-  title: z.string().default('Skele Site'),
+  title: z.string().default("Skele Site"),
 });
 
 const props = baseLayoutSchema.parse(Astro.props);

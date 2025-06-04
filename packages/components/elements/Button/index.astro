@@ -1,7 +1,7 @@
 ---
-import { buttonSchema } from "./schema";
 import clsx from "clsx";
 import Icon from "../Icon/index.astro";
+import { buttonSchema } from "./schema";
 const props = buttonSchema.parse(Astro.props);
 
 const {
@@ -37,7 +37,7 @@ const classAttr = clsx(
   type,
   `size-${size}`,
   layout,
-  outline && "outline",
+  outline && "outline"
 );
 
 const commonProps = {

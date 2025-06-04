@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.astro/
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated files
+**/.astro/
+**/content.d.ts
+**/types.d.ts
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# Cache
+.cache/
