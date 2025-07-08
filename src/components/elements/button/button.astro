@@ -1,10 +1,8 @@
 ---
 import clsx from "clsx";
-import Icon from "../Icon/index.astro";
-import { buttonSchema } from "./schema";
+import Icon from "../Icon/icon.astro";
 
-const { label, link, iconName, iconPosition, hideText, variant, size, ...restProps } =
-  buttonSchema.parse(Astro.props);
+const { label, link, iconName, iconPosition, hideText, variant, size, ...restProps } = Astro.props;
 
 const { class: extraClass, ...htmlAttributes } = Object.fromEntries(
   Object.entries(restProps).filter(([key]) => !key.startsWith("_"))

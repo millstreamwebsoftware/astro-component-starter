@@ -1,0 +1,38 @@
+spec:
+  structures:
+    - content_blocks
+  label: Icon
+  description: Displays an icon from your icon library.
+  icon: star
+  tags:
+
+blueprint:
+  name: 
+  size:
+  background:
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  name: 
+    type: select 
+    options:
+      values: _select_data.icons
+  size:
+    type: select
+    options:
+      values:
+        - none
+        - sm
+        - md
+        - lg
+      default: none
+  background:
+    type: select
+    options:
+      values:
+        - none
+        - subtle
+      default: none

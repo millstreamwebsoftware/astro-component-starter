@@ -1,16 +1,16 @@
 ---
 import clsx from "clsx";
 import { resolveComponent } from "../../../utils/renderBlock";
-import type { ButtonGroupProps } from "./schema";
 
-const { direction, align, button_blocks, ...htmlAttributes } = Astro.props as ButtonGroupProps;
+const { direction, align, button_blocks, ...htmlAttributes } = Astro.props;
 
-const alignClass =
-  {
-    start: "align-start",
-    center: "align-center",
-    end: "align-end",
-  }[align] ?? "align-start";
+const alignMap = {
+  start: "align-start",
+  center: "align-center",
+  end: "align-end",
+} as const;
+
+const alignClass = alignMap[align as keyof typeof alignMap] ?? "align-start";
 
 const classNames = clsx(
   "button-group",

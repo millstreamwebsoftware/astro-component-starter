@@ -1,0 +1,60 @@
+spec:
+  structures:
+    - button_blocks
+  label: Button
+  description: A clickable element that navigates to another page or triggers an action within the current page.
+  icon: rectangle
+  tags:
+
+blueprint:
+  label:
+  link:
+  iconName:
+  iconPosition: before
+  hideText: false
+  variant: ghost
+  size: md
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  label:
+    type: text
+    comment: The text that goes inside the button.
+  link:
+    type: text
+    comment: The URL that the button should link to.
+  iconName: 
+    type: select 
+    options:
+      values: _select_data.icons
+    comment: The name of the icon to display. See the Icon component documentation for more information.
+  iconPosition:
+    type: select
+    options:
+      values:
+        - before
+        - after
+    comment: The position of the icon relative to the label.
+  hideText:
+    type: boolean
+    comment: Whether to hide the button text and show only the icon.
+  variant:
+    type: select
+    options:
+      values:
+        - primary
+        - secondary
+        - tertiary
+        - ghost
+    comment: The presentation of button.
+  size:
+    type: select
+    options:
+      values:
+        - sm
+        - md
+        - lg
+    comment: The size of the button.

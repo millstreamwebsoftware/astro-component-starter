@@ -1,0 +1,38 @@
+spec:
+  structures:
+    - content_blocks
+  label: Button
+  description: A clickable element that navigates to another page or triggers an action within the current page.
+  icon: rectangle
+  tags:
+
+blueprint:
+  button_blocks:
+  direction: 
+  align: 
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  button_blocks:
+    comment: Array of button components to render within the group.
+  direction:
+    comment: Direction of button layout.
+    type: select
+    options:
+      values:
+        - row
+        - column
+      default: row
+  align:
+    comment: Alignment of buttons within the group.
+    type: select
+    options:
+      values:
+        - start
+        - center
+        - end
+      default: start
+  
