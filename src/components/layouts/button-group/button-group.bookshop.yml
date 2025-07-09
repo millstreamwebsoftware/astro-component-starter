@@ -1,7 +1,7 @@
 spec:
   structures:
     - content_blocks
-  label: Button
+  label: Button Group
   description: A clickable element that navigates to another page or triggers an action within the current page.
   icon: rectangle
   tags:
