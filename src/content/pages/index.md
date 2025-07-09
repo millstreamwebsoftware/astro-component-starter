@@ -1,4 +1,5 @@
 ---
+_schema: default
 title: Skele Library
 content_blocks:
   - _bookshop_name: elements/button
@@ -9,7 +10,6 @@ content_blocks:
     hideText: false
     variant: primary
     size: lg
-
   - _bookshop_name: elements/button
     label: View Components
     link: /components
@@ -18,4 +18,24 @@ content_blocks:
     hideText: false
     variant: secondary
     size: md
+  - _bookshop_name: layouts/button-group
+    button_blocks:
+      - _bookshop_name: elements/button
+        label: Welcome To Skele
+        link: /components/elements/button
+        iconName:
+        iconPosition: before
+        hideText: false
+        variant: primary
+        size: md
+      - _bookshop_name: elements/button
+        label: View Components
+        link: /components
+        iconName:
+        iconPosition: before
+        hideText: false
+        variant: secondary
+        size: lg
+    direction: row
+    align: start
 ---
