@@ -15,12 +15,7 @@ export default defineConfig({
     port: 4321,
   },
   integrations: [
-    bookshop({
-      bookshopConfigPath: path.resolve(__dirname, "src/bookshop/bookshop.config.cjs"),
-      components: {
-        source: path.resolve(__dirname, "src/components"),
-      },
-    }),
+    bookshop(),
     icon({
       iconDir: path.resolve(__dirname, "src/icons"),
     }),
