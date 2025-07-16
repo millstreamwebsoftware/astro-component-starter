@@ -21,7 +21,6 @@ const processedExamples = frontmatterExamples.map((exampleConfig: any) => {
     )
   );
 
-  // Sort examples to match the order in slugs array
   const sortedExamples = matchingExamples.sort((a: any, b: any) => {
     const aSlug = a.id.split("/").pop();
     const bSlug = b.id.split("/").pop();

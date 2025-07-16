@@ -1,4 +1,4 @@
-@layer base {
+:where(:root) {
   *,
   *::before,
   *::after {
@@ -22,7 +22,10 @@
   button,
   textarea,
   select {
-    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
   }
 
   pre {
