@@ -7,13 +7,12 @@ spec:
   tags:
 
 blueprint:
-  text: 
+  text:
   level: h2
-  size:  3xl
+  size:
   align: start
   iconName: null
   iconPosition: before
-
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -23,7 +22,7 @@ _inputs:
   text:
     comment: The text content of the heading.
     type: markdown
-    
+
   level:
     comment: The heading level.
     type: select
@@ -36,7 +35,7 @@ _inputs:
         - h5
         - h6
   size:
-    comment: The font size of the text. 
+    comment: The font size of the text.
     type: select
     options:
       values:
@@ -51,7 +50,7 @@ _inputs:
         - 5xl
         - 6xl
   align:
-    comment: The alignment of the text. 
+    comment: The alignment of the text.
     type: select
     options:
       values:

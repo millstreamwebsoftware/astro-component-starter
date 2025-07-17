@@ -10,7 +10,7 @@ const {
   hideText,
   variant = "ghost",
   size,
-  className,
+  class: className,
   ...restProps
 } = Astro.props;
 
@@ -41,7 +41,14 @@ const elementProps = {
 <Tag {...elementProps as any} class:list={classNames}>
   {
     iconName && iconName.trim() && (
-      <Icon name={iconName} buttonIcon size="none" class="button-icon" />
+      <Icon
+        name={iconName}
+        buttonIcon
+        size="none"
+        class="button-icon"
+        aria-hidden="true"
+        role="presentation"
+      />
     )
   }
   {label && <span class:list={hideText ? "sr-only" : "label"}>{label}</span>}
@@ -86,10 +93,8 @@ const elementProps = {
     &.icon-after {
       flex-direction: row-reverse;
     }
-  }
 
-  .variant {
-    &-primary {
+    &.variant-primary {
       background-color: var(--color-bg-brand);
       border-color: transparent;
       color: var(--color-text-on-brand);
@@ -102,7 +107,7 @@ const elementProps = {
       }
     }
 
-    &-secondary {
+    &.variant-secondary {
       background-color: var(--color-bg-muted);
       border-color: transparent;
       color: var(--color-text-strong);
@@ -115,7 +120,7 @@ const elementProps = {
       }
     }
 
-    &-tertiary {
+    &.variant-tertiary {
       background-color: transparent;
       border-color: var(--color-border-strong);
       color: var(--color-text-strong);
@@ -128,7 +133,7 @@ const elementProps = {
       }
     }
 
-    &-ghost {
+    &.variant-ghost {
       background-color: transparent;
       border-color: transparent;
       color: var(--color-text-strong);
@@ -140,18 +145,16 @@ const elementProps = {
         color: var(--color-text-strong);
       }
     }
-  }
 
-  .size {
-    &-sm {
+    &.size-sm {
       font-size: var(--font-size-xs);
     }
 
-    &-md {
+    &.size-md {
       font-size: var(--font-size-md);
     }
 
-    &-lg {
+    &.size-lg {
       font-size: var(--font-size-xl);
     }
   }

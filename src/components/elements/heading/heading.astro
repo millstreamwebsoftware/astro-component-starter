@@ -6,181 +6,116 @@ import MarkdownIt from "markdown-it";
 
 const {
   text,
-  level,
+  level = "h2",
   size,
-  align,
+  align = "start",
   iconName,
-  iconPosition,
-  className,
-  _bookshop_name,
+  iconPosition = "before",
+  class: className,
   ...restProps
 } = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(restProps).filter(([key]) => !key.startsWith("_"))
+);
 
 const md = MarkdownIt({ html: true });
 const MarkdownText = text ? md.renderInline(text) : "";
 
-const classNames = clsx(
-  "heading",
-  `size-${size}`,
-  `align-${align}`,
-  iconPosition === "after" && "icon-after",
-  className
-);
+const classNames = clsx("heading", size && `size-${size}`, `align-${align}`, className);
 
 const Tag = level;
-const elementProps = {
-  ...restProps,
-};
 ---
 
-<Tag {...elementProps as any} class:list={classNames}>
-  {iconName && iconName.trim() && <Icon name={iconName} size="none" class="heading-icon" />}
+<Tag class:list={classNames} {...htmlAttributes}>
+  {
+    iconName && iconPosition == "before" && (
+      <Icon
+        name={iconName}
+        size="none"
+        class="heading-icon"
+        aria-hidden="true"
+        role="presentation"
+      />
+    )
+  }
   {MarkdownText}
+  {
+    iconName && iconPosition === "after" && (
+      <Icon
+        name={iconName}
+        size="none"
+        class="heading-icon heading-icon-after"
+        aria-hidden="true"
+        role="presentation"
+      />
+    )
+  }
 </Tag>
 
 <style>
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--element__body__font-color);
-    font-weight: bold;
-    margin-bottom: 0.5em;
-    margin-top: 0.8em;
-    align-items: center;
-    display: flex;
-    gap: 0.25em;
+  .heading {
+    .heading-icon {
+      position: relative;
+      bottom: 0.1em;
+      margin-inline-end: 0.2em;
 
-    em {
-      font-weight: bold;
-      background: var(--element__heading-emphasis__background-color);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      font-style: normal;
-
-      &::selection {
-        color: var(--element__body__font-color);
-        background: var(--element__selection__background-color);
+      &.heading-icon-after {
+        margin-inline-end: 0;
+        margin-inline-start: 0.2em;
       }
     }
 
-    &.icon-after {
-      flex-direction: row-reverse;
+    &.size-xs {
+      font-size: var(--font-size-xs);
     }
-  }
 
-  .size-xs {
-    font-size: var(--font-size-xs);
-  }
+    &.size-sm {
+      font-size: var(--font-size-sm);
+    }
 
-  .size-s {
-    font-size: var(--font-size-s);
-  }
+    &.size-md {
+      font-size: var(--font-size-md);
+    }
 
-  .size-m {
-    font-size: var(--font-size-m);
-  }
+    &.size-lg {
+      font-size: var(--font-size-lg);
+    }
 
-  .size-l {
-    font-size: var(--font-size-l);
-  }
+    &.size-xl {
+      font-size: var(--font-size-xl);
+    }
 
-  .size-xl {
-    font-size: var(--font-size-xl);
-  }
+    &.size-2xl {
+      font-size: var(--font-size-2xl);
+    }
 
-  .size-2xl {
-    font-size: var(--font-size-2xl);
-  }
+    &.size-3xl {
+      font-size: var(--font-size-3xl);
+    }
 
-  .size-3xl {
-    font-size: var(--font-size-3xl);
-  }
+    &.size-4xl {
+      font-size: var(--font-size-4xl);
+    }
 
-  .size-4xl {
-    font-size: var(--font-size-4xl);
-  }
+    &.size-5xl {
+      font-size: var(--font-size-5xl);
+    }
 
-  .size-5xl {
-    font-size: var(--font-size-5xl);
-  }
+    &.size-6xl {
+      font-size: var(--font-size-6xl);
+    }
 
-  .size-6xl {
-    font-size: var(--font-size-6xl);
-  }
+    &.align-start {
+      text-align: start;
+    }
 
-  h1 {
-    font-size: var(--font-size-6xl);
-    line-height: 1.2;
-  }
+    &.align-center {
+      text-align: center;
+    }
 
-  h2 {
-    font-size: var(--font-size-5xl);
-    line-height: 1.25;
-  }
-
-  h3 {
-    font-size: var(--font-size-3xl);
-    line-height: 1.3;
-  }
-
-  h4,
-  h5,
-  h6 {
-    font-weight: normal;
-  }
-
-  h4 {
-    font-size: var(--font-size-2xl);
-    line-height: 1.35;
-  }
-
-  h5 {
-    font-size: var(--font-size-xl);
-    line-height: 1.4;
-  }
-
-  h6 {
-    font-size: var(--font-size-lg);
-    line-height: 1.45;
-  }
-
-  p,
-  ul,
-  ol {
-    font-size: var(--font-size-md);
-    line-height: 1.6;
-    color: var(--element__body__font-color);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  a,
-  td,
-  th,
-  pre,
-  code,
-  li {
-    overflow-wrap: break-word;
-  }
-
-  .align-start {
-    text-align: start;
-  }
-
-  .align-center {
-    text-align: center;
-  }
-
-  .align-end {
-    text-align: end;
+    &.align-end {
+      text-align: end;
+    }
   }
 </style>

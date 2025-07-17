@@ -2,7 +2,7 @@
 title: Image
 primary_size: lg
 examples:
-  - title: CDN
+  - title: Source
     size: lg
     slugs:
       - src-cdn
