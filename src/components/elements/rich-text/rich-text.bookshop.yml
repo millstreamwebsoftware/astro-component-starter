@@ -27,18 +27,3 @@ _inputs:
         - center
         - end
     comment: The alignment of the rich text component.
-  size:
-    comment: The font size of the text. Note, only applied to paragraphs and lists.
-    type: select
-    options:
-      values:
-        - xs
-        - sm
-        - md
-        - lg
-        - xl
-        - 2xl
-        - 3xl
-        - 4xl
-        - 5xl
-        - 6xl

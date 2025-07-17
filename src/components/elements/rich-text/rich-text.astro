@@ -5,7 +5,7 @@ import markdownit from "markdown-it";
 
 const md = markdownit({ html: true });
 
-const { text = "", align = "start", size, class: className, ...rest } = Astro.props;
+const { text = "", align = "start", class: className, ...rest } = Astro.props;
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => !key.startsWith("_"))
@@ -13,67 +13,13 @@ const htmlAttributes = Object.fromEntries(
 
 const markdownContent = text ? md.render(text) : "";
 
-const classNames = clsx("rich-text", className, `align-${align}`, size && `size-${size}`);
+const classNames = clsx("rich-text", className, `align-${align}`);
 ---
 
 <div class:list={classNames} {...htmlAttributes} set:html={markdownContent} />
 
 <style>
   .rich-text {
-    :global(p),
-    :global(ul),
-    :global(ol),
-    :global(li),
-    :global(h1),
-    :global(h2),
-    :global(h3),
-    :global(h4),
-    :global(h5),
-    :global(h6) {
-      font-size: 1em;
-      line-height: 1.5;
-    }
-
-    &.size-xs {
-      font-size: var(--font-size-xs);
-    }
-
-    &.size-sm {
-      font-size: var(--font-size-sm);
-    }
-
-    &.size-md {
-      font-size: var(--font-size-md);
-    }
-
-    &.size-lg {
-      font-size: var(--font-size-lg);
-    }
-
-    &.size-xl {
-      font-size: var(--font-size-xl);
-    }
-
-    &.size-2xl {
-      font-size: var(--font-size-2xl);
-    }
-
-    &.size-3xl {
-      font-size: var(--font-size-3xl);
-    }
-
-    &.size-4xl {
-      font-size: var(--font-size-4xl);
-    }
-
-    &.size-5xl {
-      font-size: var(--font-size-5xl);
-    }
-
-    &.size-6xl {
-      font-size: var(--font-size-6xl);
-    }
-
     &.align-start {
       text-align: start;
     }
