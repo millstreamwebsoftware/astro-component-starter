@@ -2,9 +2,9 @@
 _schema: default
 title: Skele Library
 content_blocks:
-  - _bookshop_name: layouts/button-group
+  - _bookshop_name: wrappers/button-group
     button_blocks:
-      - _bookshop_name: elements/button
+      - _bookshop_name: primitives/button
         label: View Components
         link: /skele/
         hideText: false

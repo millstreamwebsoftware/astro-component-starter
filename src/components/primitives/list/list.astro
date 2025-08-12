@@ -1,0 +1,42 @@
+---
+import Icon from "@skele/components/primitives/icon/icon.astro";
+import MarkdownIt from "markdown-it";
+
+const {
+  items = [],
+  direction = "vertical",
+  horizontalAlignment = "start",
+  size = "md",
+  class: className,
+  ...restProps
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(restProps).filter(([key]) => !key.startsWith("_"))
+);
+
+const md = new MarkdownIt({ html: true });
+---
+
+<ul
+  class:list={[
+    "list",
+    `size-${size}`,
+    `direction-${direction}`,
+    `alignment-${horizontalAlignment}`,
+    className,
+  ]}
+  role="list"
+  {...htmlAttributes}
+>
+  {
+    items.map((item: any) => {
+      return (
+        <li class="item">
+          <Icon name={item.icon} size="none" class="list-icon" aria-hidden="true" />
+          <span set:html={md.renderInline(item.text || "")} />
+        </li>
+      );
+    })
+  }
+</ul>

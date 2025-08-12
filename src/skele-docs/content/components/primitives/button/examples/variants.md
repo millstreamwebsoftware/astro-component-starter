@@ -1,0 +1,21 @@
+---
+title: "Variants"
+spacing: "all"
+blocks:
+  - _bookshop_name: "primitives/button"
+    variant: primary
+    label: Primary
+    style: "margin-inline-end: var(--spacing-sm);"
+  - _bookshop_name: "primitives/button"
+    variant: secondary
+    label: Secondary
+    style: "margin-inline-end: var(--spacing-sm);"
+  - _bookshop_name: "primitives/button"
+    variant: tertiary
+    label: Tertiary
+    style: "margin-inline-end: var(--spacing-sm);"
+  - _bookshop_name: "primitives/button"
+    variant: ghost
+    label: Ghost
+    style: "margin-inline-end: var(--spacing-sm);"
+---

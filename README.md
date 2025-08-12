@@ -17,11 +17,11 @@ Skele is a design system that provides:
 skele-astro/
 ├── src/
 │   ├── components/          # Reusable UI components
-│   │   ├── elements/        # Basic elements (Button, Icon, etc.)
-│   │   ├── layouts/         # Layout components (Section, etc.)
+│   │   ├── primitives/      # Basic primitives (Button, Icon, etc.)
+│   │   ├── wrappers/        # Layout wrappers (Section, etc.)
 │   │   └── navigation/      # Navigation components
 │   ├── content/skele/       # Component library documentation
-│   ├── layouts/             # Page layouts
+│   ├── layouts/             # Page layouts (not component categories)
 │   ├── pages/               # Astro pages
 │   │   └── skele/           # Component library routes (/skele/*)
 │   ├── styles/              # Design system styles
@@ -64,7 +64,7 @@ skele-astro/
 
 ```astro
 ---
-import Button from "@skele/components/elements/Button/index.astro";
+import Button from "@skele/components/primitives/Button/index.astro";
 ---
 
 <Button label="Click me!" type="primary" />
@@ -74,7 +74,7 @@ import Button from "@skele/components/elements/Button/index.astro";
 
 ```astro
 ---
-import Button from "@skele/components/elements/Button/index.astro";
+import Button from "@skele/components/primitives/Button/index.astro";
 ---
 
 <Button label="Save" type="primary" iconName="hero/check" />

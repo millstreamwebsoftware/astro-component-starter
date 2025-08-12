@@ -4,15 +4,15 @@
     "path": "/skele/"
   },
   {
-    "group": "Blocks",
+    "group": "Blueprints",
     "items": []
   },
   {
-    "group": "Elements",
+    "group": "Primitives",
     "items": []
   },
   {
-    "group": "Layouts",
+    "group": "Wrappers",
     "items": []
   },
   {
