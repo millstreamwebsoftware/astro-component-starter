@@ -1,8 +1,8 @@
 ---
-title: Sidebar Navigation
+title: Horizontal Navigation
 blocks:
   _bookshop_name: "navigation/nav-root"
-  variant: "sidebar"
+  variant: "horizontal"
   navBlocks:
     - _bookshop_name: "navigation/nav-list"
       navBlocks:

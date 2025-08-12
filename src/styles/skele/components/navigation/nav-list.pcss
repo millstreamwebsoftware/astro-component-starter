@@ -9,3 +9,14 @@
   font-size: var(--font-size-md);
   padding-inline-start: var(--spacing-md);
 }
+
+.nav-root.horizontal .nav-list {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-em-sm);
+}
+
+.nav-root.horizontal .nav-item > div[role="region"] .nav-list {
+  display: block;
+  min-width: 150px;
+}

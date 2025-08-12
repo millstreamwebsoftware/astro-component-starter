@@ -9,13 +9,11 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  variant: ""
+  variant: "bar"
   navBlocks: []
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  variant: ""
-  navBlocks: []
 
 _inputs:
   variant:
@@ -23,7 +21,7 @@ _inputs:
     label: Variant
     comment: The variant style of the navigation.
     options:
-      - label: Bar
-        value: "bar"
-      - label: Sidebar
-        value: "sidebar"
+      values:
+        - "horizontal"
+        - "sidebar"
+        - "mobile"

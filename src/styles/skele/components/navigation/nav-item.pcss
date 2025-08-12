@@ -14,12 +14,6 @@
     }
   }
 
-  .nav-item-icon {
-    align-items: center;
-    display: inline-flex;
-    transition: transform var(--animation-normal) ease-in-out;
-  }
-
   .nav-item-toggle:checked ~ .nav-item-trigger > .nav-item-icon {
     transform: rotate(90deg);
   }
@@ -35,6 +29,7 @@
     text-decoration: none;
     transition: background var(--animation-normal) ease-in-out;
     user-select: none;
+    white-space: nowrap;
     width: 100%;
 
     &[aria-current="page"] {
@@ -71,13 +66,41 @@
   .nav-item {
     > a,
     > .nav-item-trigger {
-      font-weight: 500;
+      font-weight: var(--font-weight-medium);
     }
 
     > a {
       align-items: center;
       display: inline-flex;
       gap: var(--spacing-xs);
+    }
+  }
+}
+
+.nav-root.horizontal .nav-item {
+  > .nav-item-trigger .nav-item-icon {
+    width: 0.8rem;
+  }
+
+  > div[role="region"] {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-subtle);
+    left: 0;
+    margin-top: var(--spacing-xs);
+    position: absolute;
+    top: 100%;
+    z-index: var(--layer-3);
+  }
+
+  > div[role="region"] .nav-item {
+    display: block;
+    width: 100%;
+
+    > a,
+    > .nav-item-trigger {
+      border-radius: 0;
+      display: block;
+      width: 100%;
     }
   }
 }
