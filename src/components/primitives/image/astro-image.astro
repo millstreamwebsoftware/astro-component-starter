@@ -1,7 +1,8 @@
 ---
 import { Picture } from "astro:assets";
 
-const { src, alt, class: className, sizes, widths, width, height, ...htmlAttributes } = Astro.props;
+const { src, alt, sizes, widths, width, height, loading, priority, ...htmlAttributes } =
+  Astro.props;
 
 let imageSrc = src;
 let imageWidth = width;
@@ -31,6 +32,8 @@ if (typeof src === "string" && src.startsWith("/images/")) {
     imageHeight = imageHeight || 450;
   }
 }
+
+const priorityAttrs = priority ? { loading: "eager", fetchpriority: "high", decoding: "sync" } : {};
 ---
 
 <Picture
@@ -42,8 +45,8 @@ if (typeof src === "string" && src.startsWith("/images/")) {
   {...imageWidth ? { width: imageWidth } : {}}
   {...imageHeight ? { height: imageHeight } : {}}
   {...isRemoteUrl ? { inferSize: true } : {}}
+  {...priorityAttrs}
   pictureAttributes={{
-    class: className,
     ...htmlAttributes,
   }}
 />

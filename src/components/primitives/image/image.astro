@@ -8,6 +8,8 @@ const {
   alt,
   sizes = "(min-width: 30em) 50vw, 100vw",
   widths = [400, 600, 800, 1200, 1600],
+  rounded = false,
+  priority,
   class: className,
   ...rest
 } = Astro.props;
@@ -21,15 +23,15 @@ const isExternalCDN = provider !== false;
 
 const commonProps = {
   alt: alt || "",
-  class: ["image", className].join(" "),
-  ...htmlAttributes,
 };
 ---
 
-{
-  isExternalCDN ? (
-    <UnpicImage {...commonProps} src={src} sizes={sizes} widths={widths} />
-  ) : (
-    <AstroImage {...commonProps} src={src} sizes={sizes} widths={widths} />
-  )
-}
+<div class:list={["image", rounded && "rounded", className]} {...htmlAttributes}>
+  {
+    isExternalCDN ? (
+      <UnpicImage {...commonProps} src={src} sizes={sizes} widths={widths} priority={priority} />
+    ) : (
+      <AstroImage {...commonProps} src={src} sizes={sizes} widths={widths} priority={priority} />
+    )
+  }
+</div>

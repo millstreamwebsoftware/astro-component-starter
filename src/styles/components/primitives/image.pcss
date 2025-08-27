@@ -1,9 +1,14 @@
 .image {
   display: block;
+  overflow: hidden;
 
   img {
     display: block;
     height: auto;
     width: 100%;
+  }
+
+  &.rounded {
+    border-radius: var(--radius-lg);
   }
 }

@@ -9,6 +9,8 @@ spec:
 blueprint:
   label: ""
   contentBlocks: []
+  headerContentBlocks: []
+  footerContentBlocks: []
   paddingHorizontal: sm
   paddingVertical: sm
   colorScheme: "default"
@@ -32,6 +34,12 @@ _inputs:
     type: text
   contentBlocks:
     comment: Array of content blocks to render within the card.
+    type: array
+  headerContentBlocks:
+    comment: Array of content blocks to render in the card header.
+    type: array
+  footerContentBlocks:
+    comment: Array of content blocks to render in the card footer.
     type: array
   paddingHorizontal:
     comment: Horizontal padding applied to the card content.

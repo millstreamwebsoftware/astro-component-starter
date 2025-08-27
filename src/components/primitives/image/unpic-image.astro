@@ -2,7 +2,7 @@
 import { inferRemoteSize } from "astro:assets";
 import { transformUrl } from "unpic";
 
-const { src, alt, class: className, sizes, widths, width, height, ...htmlAttributes } = Astro.props;
+const { src, alt, sizes, widths, width, height, priority, ...htmlAttributes } = Astro.props;
 
 let imageWidth = width;
 let imageHeight = height;
@@ -28,7 +28,7 @@ const fallbackHeight = imageHeight || Math.round(fallbackWidth * 0.75);
 const aspectRatio = imageWidth && imageHeight ? imageHeight / imageWidth : 0.75;
 ---
 
-<picture class:list={className} {...htmlAttributes}>
+<picture {...htmlAttributes}>
   <source
     type="image/avif"
     srcset={widths
@@ -62,8 +62,9 @@ const aspectRatio = imageWidth && imageHeight ? imageHeight / imageWidth : 0.75;
   <img
     src={src}
     alt={alt || ""}
-    loading="lazy"
-    decoding="async"
+    loading={priority ? "eager" : "lazy"}
+    decoding={priority ? "auto" : "async"}
+    {...priority && { fetchpriority: "high" }}
     width={fallbackWidth}
     height={fallbackHeight}
     srcset={widths

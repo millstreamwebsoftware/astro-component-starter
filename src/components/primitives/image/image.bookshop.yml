@@ -9,6 +9,7 @@ spec:
 blueprint:
   src:
   alt:
+  rounded: false
 
 preview:
 
@@ -19,3 +20,6 @@ _inputs:
   alt:
     type: text
     comment: Alternative text for accessibility
+  rounded:
+    type: switch
+    comment: Whether to apply rounded corners to the image
