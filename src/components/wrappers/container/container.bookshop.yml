@@ -50,7 +50,7 @@ _inputs:
     comment: Horizontal padding applied to the container content.
     type: select
     options:
-      values:
+      values: &sizeOptions
         - xs
         - sm
         - md
@@ -65,17 +65,7 @@ _inputs:
     comment: Vertical padding applied to the container content.
     type: select
     options:
-      values:
-        - xs
-        - sm
-        - md
-        - lg
-        - xl
-        - 2xl
-        - 3xl
-        - 4xl
-        - 5xl
-        - 6xl
+      values: *sizeOptions
   colorScheme:
     comment: Color scheme theme for the container.
     type: select
