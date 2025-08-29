@@ -19,6 +19,20 @@ _inputs:
     type: array
     options:
       structures: _structures.item
+  horizontalAlignment:
+    type: select
+    options:
+      values:
+        - value: start
+          name: Start
+        - value: center
+          name: Center
+        - value: end
+          name: End
+      value_key: value
+      preview:
+        text:
+          - key: name
 
 _structures:
   item:

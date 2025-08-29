@@ -17,7 +17,7 @@ const htmlAttributes = Object.fromEntries(
   className
 ]} {...htmlAttributes}>
   {
-    items.map((item: any) => {
+    items?.map((item: any) => {
       return (
         <dt class="title" role="term"><strong>{item.title}</strong></dt>
         <dd class="content" role="definition">{item.text}</dd>
