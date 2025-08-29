@@ -30,15 +30,19 @@ _inputs:
         - value: end
           name: End
       value_key: value
-      preview:
-        text:
-          - key: name
 
 _structures:
   item:
     values:
       - label: Definition List Item
-        icon: title
+        icon: list
         value:
           title:
           text:
+        _inputs:
+          title:
+            type: text
+            comment: A bolded title for the list item.
+          text:
+            type: textarea
+            comment: The text content of the list item.
