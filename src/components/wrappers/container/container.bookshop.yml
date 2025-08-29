@@ -15,7 +15,7 @@ blueprint:
   maxContentWidth: md
   paddingHorizontal: md
   paddingVertical: md
-  colorScheme: "default"
+  colorScheme: default
   backgroundColor:
   backgroundImage:
     source: ""
@@ -95,26 +95,36 @@ _inputs:
   backgroundImage:
     comment: Background image configuration for the container.
     type: object
-    _inputs:
-      source:
-        comment: URL or path to the background image.
-        type: text
-      alt:
-        comment: Alt text for the background image.
-        type: text
-      positionVertical:
-        comment: Vertical position of the background image.
-        type: select
-        options:
-          values:
-            - top
-            - center
-            - bottom
-      positionHorizontal:
-        comment: Horizontal position of the background image.
-        type: select
-        options:
-          values:
-            - left
-            - center
-            - right
+    options:
+      preview:
+        icon: image
+        image:
+          - key: source
+        text: 
+          - key: alt
+          - Background image
+        subtext:
+          - key: source
+          - Add an image source.
+  backgroundImage.source:
+    comment: URL or path to the background image.
+    type: image
+  backgroundImage.alt:
+    comment: Alt text for the background image.
+    type: textarea
+  backgroundImage.positionVertical:
+    comment: Vertical position of the background image.
+    type: select
+    options:
+      values:
+        - top
+        - center
+        - bottom
+  backgroundImage.positionHorizontal:
+    comment: Horizontal position of the background image.
+    type: select
+    options:
+      values:
+        - left
+        - center
+        - right
