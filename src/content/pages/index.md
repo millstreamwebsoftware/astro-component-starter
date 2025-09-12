@@ -158,9 +158,32 @@ pageBlocks:
         align: center
       - _bookshop_name: wrappers/card
         label: A lonely card
-        contentBlocks: []
-        headerContentBlocks: []
-        footerContentBlocks: []
+        contentBlocks:
+          - _bookshop_name: primitives/simple-text
+            text: d,jfadjfhakdjsfhadf
+            align: start
+            size: md
+        headerContentBlocks:
+          - _bookshop_name: primitives/heading
+            text: aksjdhaksjdhkajshdasd
+            type: h2
+            size:
+            align: start
+            iconName:
+            iconPosition: before
+        footerContentBlocks:
+          - _bookshop_name: wrappers/button-group
+            buttonBlocks:
+              - _bookshop_name: primitives/button
+                text:
+                link:
+                iconName:
+                iconPosition: before
+                hideText: false
+                variant: ghost
+                size: md
+            direction: row
+            align: start
         paddingHorizontal: sm
         paddingVertical: sm
         colorScheme: default
@@ -171,8 +194,146 @@ pageBlocks:
           positionVertical: top
           positionHorizontal: center
         link: ''
-        rounded: false
-        border: false
+        rounded: true
+        border: true
+      - _bookshop_name: wrappers/carousel
+        label: ''
+        slides:
+          - contentBlocks:
+              - _bookshop_name: primitives/simple-text
+                text: A carousel
+                align: start
+                size: md
+              - _bookshop_name: primitives/smart-image
+                source: /src/assets/images/component-library/castle.jpg
+                alt: A image
+                rounded: false
+                aspectRatio:
+                positionVertical: center
+                positionHorizontal: center
+          - contentBlocks:
+              - _bookshop_name: primitives/definition-list
+                items:
+                  - title: Another slide
+                    text: HEHEHEHEHEE
+                horizontalAlignment: start
+        autoPlay: false
+        autoScroll: false
+        slideWidthPercent: 100%
+        minSlideWidth: 0
+      - _bookshop_name: wrappers/content-selector
+        items:
+          - title: First panel
+            contentBlocks:
+              - _bookshop_name: primitives/list
+                items:
+                  - text: Sup
+                    icon: arrow-down-circle
+                  - text: Sup
+                    icon: archive-box
+                direction: vertical
+                horizontalAlignment: start
+                size: md
+          - title: 2nd panel
+            contentBlocks:
+              - _bookshop_name: primitives/list
+                items:
+                  - text: Sup
+                    icon: arrow-down-circle
+                  - text: Sup
+                    icon: archive-box
+                direction: vertical
+                horizontalAlignment: start
+                size: md
+              - _bookshop_name: primitives/simple-text
+                text: Som text
+                align: start
+                size: md
+        navigationPosition: top
+      - _bookshop_name: wrappers/grid
+        minItemWidth: 280
+        maxItemWidth: 320
+        verticalAlignment: center
+        horizontalAlignment: space-between
+        equalWidth: true
+        items:
+          - contentBlocks:
+              - _bookshop_name: primitives/heading
+                text: A grid item
+                type: h3
+                size: md
+                align: start
+                iconName: arrow-down-circle
+                iconPosition: after
+              - _bookshop_name: primitives/simple-text
+                text: Some ***text*** in the grid
+                align: start
+                size: md
+          - contentBlocks:
+              - _bookshop_name: primitives/heading
+                text: A grid item
+                type: h3
+                size: md
+                align: start
+                iconName: arrow-down-circle
+                iconPosition: after
+              - _bookshop_name: primitives/simple-text
+                text: Some ***text*** in the grid
+                align: start
+                size: md
+          - contentBlocks:
+              - _bookshop_name: primitives/heading
+                text: A grid item
+                type: h3
+                size: md
+                align: start
+                iconName: arrow-down-circle
+                iconPosition: after
+              - _bookshop_name: primitives/simple-text
+                text: Some ***text*** in the grid
+                align: start
+                size: md
+          - contentBlocks:
+              - _bookshop_name: primitives/heading
+                text: A grid item
+                type: h3
+                size: md
+                align: start
+                iconName: arrow-down-circle
+                iconPosition: after
+              - _bookshop_name: primitives/simple-text
+                text: Some ***text*** in the grid
+                align: start
+                size: md
+          - contentBlocks:
+              - _bookshop_name: primitives/heading
+                text: A grid item
+                type: h3
+                size: md
+                align: start
+                iconName: arrow-down-circle
+                iconPosition: after
+              - _bookshop_name: primitives/simple-text
+                text: Some ***text*** in the grid
+                align: start
+                size: md
+      - _bookshop_name: wrappers/split
+        firstColumnContentBlocks:
+          - _bookshop_name: primitives/counter
+            number: 100
+            prefix:
+            suffix: '%'
+            horizontalAlignment: start
+        secondColumnContentBlocks:
+          - _bookshop_name: primitives/testimonial
+            text: We always give 100%
+            authorName: Tommy Test
+            authorDescription: A humble developer
+            horizontalAlignment: start
+        distributionMode: three-Quarters-Quarter
+        fixedWidth:
+        verticalAlignment: top
+        reverse: false
     maxContentWidth: 2xl
     paddingHorizontal: lg
     paddingVertical: lg
