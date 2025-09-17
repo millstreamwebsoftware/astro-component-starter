@@ -1,6 +1,5 @@
 ---
 title: Button Group
-primary_size: sm
 examples:
   - title: Direction
     slugs:

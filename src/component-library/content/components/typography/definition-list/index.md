@@ -1,6 +1,5 @@
 ---
 title: Definition List
-primary_size: md
 examples:
   - slugs:
       - alignment-start

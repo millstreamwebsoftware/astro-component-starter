@@ -1,6 +1,5 @@
 ---
 title: Video
-primary_size: xl
 order: 3
 examples:
   - slugs:

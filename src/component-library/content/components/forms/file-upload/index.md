@@ -1,6 +1,5 @@
 ---
 title: File Upload
-primary_size: md
 examples:
   - slugs:
       - multiple

@@ -1,6 +1,5 @@
 ---
 title: Select
-primary_size: md
 examples:
   - slugs:
       - placeholder

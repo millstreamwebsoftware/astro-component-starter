@@ -1,6 +1,5 @@
 ---
 title: Testimonial
-primary_size: sm
 examples:
   - slugs:
       - alignment-start

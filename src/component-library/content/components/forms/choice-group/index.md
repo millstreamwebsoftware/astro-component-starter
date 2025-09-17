@@ -1,6 +1,5 @@
 ---
 title: Choice Group
-primary_size: md
 examples:
   - title: Types
     slugs:
