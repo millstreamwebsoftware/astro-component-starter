@@ -155,7 +155,3 @@ _inputs:
   rounded:
     comment: Whether to apply rounded corners to the container.
     type: switch
-
-_structures:
-  contentBlocks:
-    style: modal
