@@ -10,48 +10,56 @@ spec:
   preview:
     icon: videocam
     text:
-      - template: Smart Video - {videoType}
+      - template: Smart Video - {type}
       - Smart Video
     subtext:
       - key: title
-      - key: videoSrc
+      - key: source
       - Add video source
 
 blueprint:
-  type: youtube
+  externalVideoHost: true
+  videoHost: youtube
   id:
-  src:
-  poster:
   title:
+  source:
+  poster:
 
 preview:
 
 _inputs:
-  type:
+  externalVideoHost:
+    type: switch
+    comment: The video is hosted through an external provider.
+  videoHost:
     type: select
+    hidden: '!externalVideoProvider'
     options:
       values:
         - id: youtube
           name: Youtube
         - id: vimeo
           name: Vimeo
-        - id: native
-          name: Native
-    id:
-      comment: Enter a video ID from a public video on YouTube or Vimeo
-      hidden: 'type == "native"'
-    src:
-      type: file
-      label: Video Source
-      comment: Must be mp4 as this is supported by all modern browsers
-      options:
-        accepts_mime_types:
-          - video/mp4
-        paths:
-          uploads: /src/assets/videos/
-      hidden: 'type != "native"'
-    poster:
-      comment: The image displayed before the video plays or while it is loading.
-      hidden: 'type != "native"'
-    autoplay:
-      comment: Play the video automatically on load without the user pressing play
+  id:
+    type: text
+    comment: Enter a video ID from a public video on YouTube or Vimeo.
+    hidden: '!externalVideoProvider'
+  title:
+    type: text
+    comment: The video title provides accessibility information for assistive technologies (like screen readers) and can display a tooltip when a user hovers over the video.
+    hidden: '!externalVideoProvider'
+  source:
+    type: file
+    label: Video Source
+    comment: Must be mp4 as this is supported by all modern browsers.
+    hidden: 'externalVideoProvider'
+    options:
+      accepts_mime_types:
+        - video/mp4
+      paths:
+        uploads: public/assets/videos
+        static: public
+  poster:
+    type: image
+    comment: The image displayed before the video plays or while it is loading.
+    hidden: 'externalVideoProvider'

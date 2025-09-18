@@ -1,5 +1,5 @@
 ---
-const { type = "youtube", id, src, poster, title, class: className, ...restProps } = Astro.props;
+const { externalVideoHost, videoHost = "youtube", id, source, poster, title, class: className, ...restProps } = Astro.props;
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(restProps).filter(([key]) => !key.startsWith("_"))
@@ -7,18 +7,8 @@ const htmlAttributes = Object.fromEntries(
 ---
 
 {
-  type === "native" ? (
-    <video
-      preload="none"
-      controls
-      poster={poster}
-      class:list={["smart-video", className]}
-      {...htmlAttributes}
-    >
-      <source src={`${src}`} type="video/mp4" />
-      Your browser does not support the HTML5 video element.
-    </video>
-  ) : type === "vimeo" ? (
+  externalVideoHost ? (
+    videoHost === "vimeo" ? (
     <>
       <script>import '@choctawnationofoklahoma/lite-vimeo';</script>
       <lite-vimeo
@@ -46,5 +36,17 @@ const htmlAttributes = Object.fromEntries(
         </a>
       </lite-youtube>
     </>
+  )
+  ) : (
+    <video
+      preload="none"
+      controls
+      poster={poster}
+      class:list={["smart-video", className]}
+      {...htmlAttributes}
+    >
+      <source src={`${source}`} type="video/mp4" />
+      Your browser does not support the HTML5 video element.
+    </video>
   )
 }
