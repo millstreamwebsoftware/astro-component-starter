@@ -8,14 +8,12 @@
   display: grid;
   gap: var(--gap-size);
 
-  /* Mobile: single column by default */
   grid-template-columns: var(--split-columns-mobile);
 
   @media (--from-lg) {
     grid-template-columns: var(--split-columns-desktop);
   }
 
-  /* Vertical alignment options */
   &.align-top {
     align-items: start;
   }
