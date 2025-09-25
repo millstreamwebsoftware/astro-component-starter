@@ -10,9 +10,10 @@ spec:
   preview:
     text: Button Group
     subtext:
-      - template: 
+      - template:
 
 blueprint:
+  label: ""
   buttonBlocks:
   direction: row
   align: start
@@ -22,6 +23,9 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  label:
+    comment: Optional label for the button group to help identify it in the editor.
+    type: text
   buttonBlocks:
     comment: Array of button components to render within the group.
     options:

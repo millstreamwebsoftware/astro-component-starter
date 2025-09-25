@@ -9,6 +9,7 @@ spec:
   tags: []
 
 blueprint:
+  label: ""
   layout: features
   minItemWidth: 280
   maxItemWidth: 400
@@ -17,6 +18,9 @@ blueprint:
 preview:
 
 _inputs:
+  label:
+    comment: Optional label for the grid to help identify it in the editor.
+    type: text
   layout:
     comment: Choose the layout style for your grid content.
     type: select

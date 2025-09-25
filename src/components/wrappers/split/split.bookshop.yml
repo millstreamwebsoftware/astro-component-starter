@@ -9,6 +9,7 @@ spec:
   tags: []
 
 blueprint:
+  label: ""
   firstColumnContentBlocks: []
   secondColumnContentBlocks: []
   distributionMode: half
