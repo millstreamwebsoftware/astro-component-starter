@@ -10,12 +10,7 @@
 
   display: grid;
   gap: var(--gap-size);
-
-  grid-template-columns: var(--split-columns-mobile);
-
-  @container (min-width: 768px) {
-    grid-template-columns: var(--split-columns-desktop);
-  }
+  grid-template-columns: var(--split-columns-desktop);
 
   &.align-top {
     align-items: start;

@@ -23,6 +23,7 @@ blocks:
             This column has a fixed width.
   distributionMode: "flexible-fixed"
   fixedWidth: null
+  minSplitWidth: 500
   verticalAlignment: "top"
   reverse: false
 ---

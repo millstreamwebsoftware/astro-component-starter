@@ -13,6 +13,7 @@ blueprint:
   secondColumnContentBlocks: []
   distributionMode: half
   fixedWidth: null
+  minSplitWidth: 0
   verticalAlignment: top
   reverse: false
 
@@ -55,6 +56,9 @@ _inputs:
           name: Flexible-Fixed
   fixedWidth:
     comment: Fixed width in pixels for the fixed column (used when distribution mode includes 'fixed').
+    type: number
+  minSplitWidth:
+    comment: Minimum width in pixels before switching to mobile layout.
     type: number
   verticalAlignment:
     comment: Vertical alignment of the columns.

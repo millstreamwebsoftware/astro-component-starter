@@ -19,4 +19,5 @@ blocks:
   fixedWidth: null
   verticalAlignment: "top"
   reverse: false
+  minSplitWidth: 500
 ---
