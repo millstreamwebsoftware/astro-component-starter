@@ -48,7 +48,9 @@ _inputs:
 _structures:
   grid_item:
     values:
-      - value:
+      - label: Grid Item
+        icon: grid_view
+        value:
           contentBlocks: []
         _inputs:
           contentBlocks:
@@ -56,5 +58,3 @@ _structures:
             comment: Content blocks to render within this grid item.
             options:
               structures: _structures.contentBlocks
-        preview:
-          icon: grid_view

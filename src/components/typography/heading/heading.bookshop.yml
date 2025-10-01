@@ -97,6 +97,11 @@ _inputs:
     type: select
     options:
       values: _select_data.icons
+      preview:
+        text:
+          - key: name
+        image:
+          - template: "src/icons/{id}.svg"
   iconPosition:
     comment: The position of the icon relative to the text.
     type: select

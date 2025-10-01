@@ -55,6 +55,16 @@ _structures:
           label:
           checked:
           icon:
+        preview:
+          icon: radio_button_partial
+          image:
+            - template: "src/icons/{icon}.svg"
+          text:
+            - key: label
+            - Segment Option
+          subtext:
+            - key: value
+            - Add a value for the option.
         _inputs:
           value:
             type: text
@@ -70,11 +80,8 @@ _structures:
             comment: The name of the icon to display from the icon library next to the segment option.
             options:
               values: _select_data.icons
-        preview:
-          icon: radio_button_partial
-          text:
-            - key: label
-            - Segment Option
-          subtext:
-            - key: value
-            - Add a value for the option.
+              preview:
+                text:
+                  - key: name
+                image:
+                  - template: "src/icons/{id}.svg"

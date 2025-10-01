@@ -62,6 +62,14 @@ _structures:
       - value:
           value:
           label:
+        preview:
+          icon: check_circle
+          text:
+            - key: label
+            - Add a label for the select item
+          subtext:
+            - key: value
+            - Add a value for the select item
         _inputs:
           label:
             type: text
@@ -69,11 +77,3 @@ _structures:
           value:
             type: text
             comment: The value to add to the form when the option is selected.
-        preview:
-          icon: check_circle
-          text:
-            - key: label
-            - Select Option
-          subtext:
-            - key: value
-            - Add a value for the select item

@@ -62,6 +62,14 @@ _structures:
           value:
           label:
           checked:
+        preview:
+          icon: check_box
+          text:
+            - key: label
+            - Choice Option
+          subtext:
+            - key: value
+            - Add a value for the option.
         _inputs:
           value:
             type: text
@@ -72,11 +80,3 @@ _structures:
           checked:
             type: switch
             comment: Whether the field is checked by default.
-        preview:
-          icon: check_box
-          text:
-            - key: label
-            - Choice Option
-          subtext:
-            - key: value
-            - Add a value for the option.

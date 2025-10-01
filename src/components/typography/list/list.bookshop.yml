@@ -66,10 +66,13 @@ _structures:
   item:
     values:
       - label: List Item
-        icon: text_fields
         value:
           text: ""
           icon:
+        preview:
+          icon: text_fields
+          image:
+            - template: "src/icons/{icon}.svg"
         _inputs:
           text:
             type: markdown
@@ -90,3 +93,8 @@ _structures:
             comment: The name of the icon to display from the icon library.
             options:
               values: _select_data.icons
+              preview:
+                text:
+                  - key: name
+                image:
+                  - template: "src/icons/{id}.svg"

@@ -34,8 +34,8 @@ _inputs:
     comment: If true, the first item will be open by default.
   singleOpen:
     type: switch
-
     comment: If true, only one item can be open at a time within this accordion.
+
 _structures:
   accordion_item:
     values:

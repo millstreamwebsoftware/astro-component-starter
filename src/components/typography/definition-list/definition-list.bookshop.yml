@@ -39,6 +39,13 @@ _structures:
           _component: definition-list-item
           title:
           text:
+        preview:
+          icon: list
+          text:
+            - key: title
+            - Definition List Item
+          subtext:
+            - key: text
         _inputs:
           title:
             type: text
@@ -49,10 +56,3 @@ _structures:
           text:
             type: textarea
             comment: The text content of the list item.
-        preview:
-          icon: list
-          text:
-            - key: title
-            - Definition List Item
-          subtext:
-            - key: text
