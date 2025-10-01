@@ -39,7 +39,7 @@ _inputs:
             _inputs:
               id:
                 type: text
-                comment: Enter a video ID from a public video on YouTube.
+                comment: Enter a video ID from a public video on YouTube. The video ID will be located in the URL of the video page, right after the v= URL parameter.
           - label: Vimeo
             value:
               _type: vimeo
@@ -48,7 +48,7 @@ _inputs:
             _inputs:
               id:
                 type: text
-                comment: Enter a video ID from a public video on Vimeo.
+                comment: Enter a video ID from a public video on Vimeo. The video ID will be located in the URL of the video page, in the form of numbers that come after the slash.
           - label: Self Hosted
             value:
               _type: self-hosted
