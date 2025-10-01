@@ -37,6 +37,11 @@ _inputs:
     comment: The name of the icon to display. See the Icon component documentation for more information.
     options:
       values: _select_data.icons
+      preview:
+        text:
+          - key: name
+        image:
+          - template: "src/icons/{id}.svg"
   iconPosition:
     type: select
     comment: The position of the icon relative to the text.
