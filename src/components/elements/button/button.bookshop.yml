@@ -12,6 +12,8 @@ spec:
       - Button
     subtext:
       - key: link
+      - key: iconName
+      - Add button content
 
 blueprint:
   text:

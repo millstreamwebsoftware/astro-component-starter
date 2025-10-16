@@ -4,7 +4,7 @@ import Component from "@components/utils/renderBlock.astro";
 
 const {
   label,
-  cardBlocks,
+  contentBlocks,
   headerContentBlocks,
   footerContentBlocks,
   paddingHorizontal,
@@ -90,7 +90,7 @@ const Tag = link ? "a" : "div";
       ]}
     >
       <slot />
-      <Component contentBlocks={cardBlocks} />
+      <Component contentBlocks={contentBlocks} />
     </div>
   </div>
 
