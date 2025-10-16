@@ -1,6 +1,4 @@
 
-@ts-check
-
 import "@cloudcannon/editable-regions/astro-react-renderer";
 
 // Dynamically import all components from the components directory
