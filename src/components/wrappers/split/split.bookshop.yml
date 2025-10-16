@@ -7,6 +7,13 @@ spec:
   description: Arranges content in two columns.
   icon: vertical_split
   tags: []
+  preview:
+    text:
+      - key: label
+      - Split
+    subtext:
+      - template: A split containing {firstColumnContentBlocks|array_length} content {"block"|pluralize=firstColumnContentBlocks} in the first column, and {secondColumnContentBlocks|array_length} content {"block"|pluralize=secondColumnContentBlocks} in the second column
+      - Add items to the split
 
 blueprint:
   label: ""

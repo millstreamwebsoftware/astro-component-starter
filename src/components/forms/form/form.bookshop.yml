@@ -13,7 +13,7 @@ spec:
   tags: []
   preview:
     subtext:
-      - template: An form containing {formBlocks|array_length} {"item"|pluralize=formBlocks}
+      - template: A form containing {formBlocks|array_length} {"item"|pluralize=formBlocks}
       - Add items to the form
 
 blueprint:

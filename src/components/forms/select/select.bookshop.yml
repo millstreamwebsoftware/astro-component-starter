@@ -6,8 +6,6 @@ spec:
   icon: view_list
   tags: []
   preview:
-    icon: view_list
-    text: Select
     subtext:
       - key: label
       - key: name

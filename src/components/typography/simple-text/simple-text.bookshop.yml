@@ -11,6 +11,10 @@ spec:
   description: "Displays plain text in layouts with configurable size and alignment."
   icon: view_headline
   tags: []
+  preview:
+    subtext:
+      - key: text
+      - Add text to block
 
 blueprint:
   text:

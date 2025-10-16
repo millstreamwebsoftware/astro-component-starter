@@ -5,6 +5,9 @@ spec:
   description: "A segmented control component using radio buttons or checkboxes with optional icons."
   icon: radio_button_partial
   tags: []
+  preview:
+    subtext:
+      - template: A segments field, containing {options|array_length} {"option"|pluralize=options}
 
 blueprint:
   title:

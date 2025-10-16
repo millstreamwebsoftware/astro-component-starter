@@ -6,8 +6,6 @@ spec:
   icon: text_ad
   tags: []
   preview:
-    icon: text_ad
-    text: Textarea
     subtext:
       - key: label
       - key: name

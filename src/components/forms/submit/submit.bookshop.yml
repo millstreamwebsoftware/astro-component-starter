@@ -5,6 +5,12 @@ spec:
   description: "A submit button for forms."
   icon: check
   tags: []
+  preview:
+    text:
+      - key: text
+      - key: iconName
+      - Submit Button
+    subtext: A submit button for forms.
 
 blueprint:
   text: Submit

@@ -5,6 +5,12 @@ spec:
   description: "A group of checkboxes or radio buttons with labels."
   icon: check_box
   tags: []
+  preview:
+    text:
+      - key: title
+      - Choice Group
+    subtext:
+      - A choice group containing {options|array_length} {"option"|pluralize=options}
 
 blueprint:
   title:

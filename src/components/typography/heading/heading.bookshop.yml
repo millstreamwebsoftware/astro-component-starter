@@ -10,7 +10,14 @@ spec:
   label: Heading
   description: The main title or heading with levels (H1 to H6) to show hierarchy and structure for the page and sections.
   icon: title
-  tags:
+  tags: []
+  preview:
+    text:
+      - template: Heading - {type}
+      - Add heading type
+    subtext:
+      - key: text
+      - Add heading text
 
 blueprint:
   text:

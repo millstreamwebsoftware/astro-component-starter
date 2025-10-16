@@ -6,6 +6,13 @@ spec:
   description: "A container component that provides layout structure with background options, padding, and content width controls."
   icon: width_full
   tags: []
+  preview:
+    text:
+      - key: label
+      - Container
+    subtext:
+      - template: A container containing {contentBlocks|array_length} content {"block"|pluralize=slides}
+      - Add content blocks to the container
 
 blueprint:
   label: ""

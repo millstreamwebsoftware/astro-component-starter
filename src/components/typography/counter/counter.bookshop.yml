@@ -10,13 +10,11 @@ spec:
   label: Counter
   description: Animated number that counts up when visible.
   icon: speed
-  tags:
+  tags: []
   preview:
-    text: Counter
     subtext:
       - template: "{prefix}{number}{suffix}"
       - Add counter details
-    icon: speed
 
 blueprint:
   number:

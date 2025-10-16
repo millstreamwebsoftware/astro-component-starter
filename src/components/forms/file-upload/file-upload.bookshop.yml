@@ -6,8 +6,6 @@ spec:
   icon: upload
   tags: []
   preview:
-    icon: upload
-    text: File Upload
     subtext:
       - key: label
       - key: name
