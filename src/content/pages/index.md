@@ -2,10 +2,10 @@
 _schema: default
 title: Your Site
 pageBlocks:
-  - _bookshop_name: wrappers/container
+  - _component: wrappers/container
     label: ""
     contentBlocks:
-      - _bookshop_name: typography/heading
+      - _component: typography/heading
         text: Welcome to your CloudCannon Starter Component site
         type: h1
         alignX: center
