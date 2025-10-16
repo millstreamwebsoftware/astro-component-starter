@@ -1,9 +1,12 @@
+structure_aliases:
+  firstContentBlocks: contentBlocks
+  secondContentBlocks: contentBlocks
 collections_config:
   pages:
     path: src/content/pages
     glob:
       - "**/*.md"
-    url: "/[full_slug]/"
+    url: /[full_slug]/
     icon: laptop_mac
     _enabled_editors:
       - visual
@@ -14,7 +17,7 @@ collections_config:
     schemas:
       default:
         name: New Page
-        path: ".cloudcannon/schemas/page.md"
+        path: .cloudcannon/schemas/page.md
         remove_extra_inputs: false
     create:
       path: "[relative_base_path]/{filename|slugify|lowercase}.md"
@@ -23,7 +26,6 @@ collections_config:
       title:
         type: text
         comment: Controls the metadata title for the page.
-
 collection_groups:
   - heading: Pages
     collections:
@@ -31,7 +33,6 @@ collection_groups:
   - heading: Data
     collections:
       - data
-
 _select_data:
   icons:
     - id: academic-cap
@@ -724,3 +725,82 @@ _select_data:
       name: X Circle
     - id: x-mark
       name: X Mark
+_structures:
+  contentBlocks:
+    values:
+      - &ref_0
+        label: Simple Text
+        icon: view_headline
+        description: Displays blocks of text for content sections with options for alignment, size and decoration.
+        value:
+          _type: simple-text
+          text: ""
+          alignX: start
+          size: md
+        preview:
+          text:
+            - key: text
+            - Simple Text
+          icon: view_headline
+        picker_preview:
+          text: Simple Text
+          subtext: Displays blocks of text for content sections with options for alignment, size and decoration.
+          icon: view_headline
+        _inputs:
+          text:
+            comment: The text content of the simple text.
+            type: markdown
+            options:
+              bold: true
+              italic: true
+              link: true
+              strike: true
+              subscript: true
+              superscript: true
+              underline: true
+              undo: true
+              redo: true
+              removeformat: true
+              copyformatting: true
+          alignX:
+            comment: The horizontal alignment of the text.
+            type: select
+            options:
+              values:
+                - id: start
+                  name: Start
+                - id: center
+                  name: Center
+                - id: end
+                  name: End
+          size:
+            type: select
+            comment: The font size of the text.
+            options:
+              values:
+                - id: xs
+                  name: Extra Small
+                - id: sm
+                  name: Small
+                - id: md
+                  name: Medium
+                - id: lg
+                  name: Large
+                - id: xl
+                  name: Extra Large
+                - id: 2xl
+                  name: 2xl
+                - id: 3xl
+                  name: 3xl
+                - id: 4xl
+                  name: 4xl
+                - id: 5xl
+                  name: 5xl
+                - id: 6xl
+                  name: 6xl
+  firstContentBlocks:
+    values:
+      - *ref_0
+  secondContentBlocks:
+    values:
+      - *ref_0
