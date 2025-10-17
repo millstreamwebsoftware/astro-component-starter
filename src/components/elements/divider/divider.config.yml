@@ -1,6 +1,6 @@
 label: Divider
 icon: horizontal_rule
-description: "A horizontal line to separate content."
+description: "Visual separator for dividing content sections."
 structures:
   - containerBlocks
   - cardBlocks

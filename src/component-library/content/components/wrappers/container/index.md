@@ -1,6 +1,7 @@
 ---
 title: Container
 order: 1
+overview: "A versatile section wrapper for full-width layouts with centered content. Supports configurable backgrounds, images, padding, color schemes, and max-width constraints."
 slots:
   - title: default
     description: The contents of the Container.

@@ -1,6 +1,6 @@
 label: Definition List
 icon: dns
-description: "For displaying key-value pairs. Ideal for glossaries, opening times, etc."
+description: "Semantic list for term/definition pairs."
 structures:
   - containerBlocks
   - cardBlocks

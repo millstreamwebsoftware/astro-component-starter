@@ -1,6 +1,6 @@
 label: Choice Group
 icon: check_box
-description: A group of checkboxes or radio buttons with labels.
+description: "Form field with checkboxes or radio buttons."
 structures:
   - formBlocks
 value:

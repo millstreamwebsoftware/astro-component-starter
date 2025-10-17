@@ -1,6 +1,6 @@
 label: Bar Navigation
 icon: navigation
-description: A horizontal navigation bar with dropdown menus.
+description: "Horizontal navigation with nested dropdown menus."
 structures: []
 value:
   _component: navigation/bar/bar

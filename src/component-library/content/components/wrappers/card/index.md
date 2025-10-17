@@ -2,6 +2,7 @@
 title: Card
 description: A container component that provides card layout with background options, padding controls, and optional link.
 order: 2
+overview: "A flexible container for grouping related content. Supports customizable backgrounds, borders, padding, and rounded corners. Includes optional header and footer sections."
 slots:
   - title: default
     description: The contents for the body of the Card.

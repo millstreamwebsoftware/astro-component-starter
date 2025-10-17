@@ -1,6 +1,6 @@
 label: Split
 icon: vertical_split
-description: Arranges content in two columns.
+description: "Two-column layout for side-by-side content."
 structures:
   - containerBlocks
   - carouselBlocks

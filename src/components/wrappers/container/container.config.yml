@@ -1,6 +1,6 @@
 label: Container
 icon: width_full
-description: A container component that provides layout structure with background options, padding, and content width controls.
+description: "Section wrapper for full-width layouts with centered content."
 structures:
   - containerBlocks
   - pageBlocks

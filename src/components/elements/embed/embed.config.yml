@@ -1,6 +1,6 @@
 label: Embed
 icon: data_object
-description: "Embed content from other sources."
+description: "Responsive iframe wrapper for embedded content."
 structures:
   - containerBlocks
   - cardBlocks

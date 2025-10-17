@@ -1,6 +1,6 @@
 label: Button
 icon: variables
-description: "A clickable element that navigates to another page or triggers an action within the current page."
+description: "Interactive button for calls-to-action and navigation."
 structures:
   - buttonBlocks
 value:

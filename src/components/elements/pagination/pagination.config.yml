@@ -1,6 +1,6 @@
 label: Pagination
 icon: list
-description: "A navigation component for Astro's built-in pagination, simply passing the page object."
+description: "Navigation component for multi-page content."
 structures: []
 value:
   _component: elements/pagination

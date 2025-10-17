@@ -1,6 +1,6 @@
 label: Card
 icon: crop_square
-description: A container component that provides card layout with background options and padding controls.
+description: "Flexible container for grouping related content."
 structures:
   - containerBlocks
   - splitBlocks

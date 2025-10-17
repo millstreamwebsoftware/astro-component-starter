@@ -1,5 +1,6 @@
 ---
 title: Button Group
+overview: "A layout component for arranging multiple buttons. Supports horizontal or vertical stacks with automatic spacing and consistent alignment."
 slots:
   - title: default
     description: The contents for the the ButtonGroup.

@@ -1,6 +1,6 @@
 label: Main Nav
 icon: navigation
-description: "A responsive main navigation component that displays both desktop and mobile navigation with dropdown support, logo, and action buttons."
+description: "Complete header navigation with logo and menus."
 structures: []
 value:
   _component: blocks/main-nav

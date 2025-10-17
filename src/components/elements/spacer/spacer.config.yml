@@ -1,6 +1,6 @@
 label: Spacer
 icon: space_bar
-description: "Gives space between content."
+description: "Utility component for creating vertical spacing."
 structures:
   - containerBlocks
   - cardBlocks

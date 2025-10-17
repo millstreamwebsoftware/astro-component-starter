@@ -1,6 +1,6 @@
 label: Smart Video
 icon: videocam
-description: "Play a video from YouTube, Vimeo, or your local files."
+description: "Video component supporting YouTube, Vimeo, and HTML5."
 structures:
   - containerBlocks
   - cardBlocks

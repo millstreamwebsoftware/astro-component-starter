@@ -1,6 +1,6 @@
 label: Simple Text
 icon: view_headline
-description: "Displays blocks of text for content sections with options for alignment, size and decoration."
+description: "Paragraph for plain text content."
 structures:
   - containerBlocks
   - cardBlocks

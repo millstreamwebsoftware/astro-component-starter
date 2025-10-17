@@ -1,6 +1,6 @@
 label: Carousel
 icon: image
-description: A carousel component for displaying slides with navigation controls
+description: "Interactive slideshow for scrollable content panels."
 structures:
   - containerBlocks
   - splitBlocks

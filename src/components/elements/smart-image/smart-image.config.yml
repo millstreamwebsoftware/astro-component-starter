@@ -1,6 +1,6 @@
 label: Smart Image
 icon: image
-description: "Displays an image optimized for performance with smart CDN detection."
+description: "Optimized image component with automatic optimization."
 structures:
   - containerBlocks
   - cardBlocks

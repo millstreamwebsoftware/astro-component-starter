@@ -1,6 +1,6 @@
 label: Submit
 icon: check
-description: A submit button for forms.
+description: "Form submission button with loading states."
 structures:
   - formBlocks
 value:

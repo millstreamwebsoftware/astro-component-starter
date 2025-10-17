@@ -1,6 +1,6 @@
 label: Input
 icon: rectangle
-description: A form input field with an optional label.
+description: "Form field for single-line text input."
 structures:
   - formBlocks
 value:

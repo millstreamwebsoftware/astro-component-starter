@@ -1,6 +1,6 @@
 label: Textarea
 icon: text_ad
-description: A multi-line text input field with an optional label.
+description: "Multi-line form field for longer text input."
 structures:
   - formBlocks
 value:

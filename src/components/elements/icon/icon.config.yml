@@ -1,6 +1,6 @@
 label: Icon
 icon: star
-description: "Displays an icon from your icon library."
+description: "SVG icon component for visual enhancement."
 structures: []
 value:
   _component: elements/icon

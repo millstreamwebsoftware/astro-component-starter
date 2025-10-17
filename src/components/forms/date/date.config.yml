@@ -1,6 +1,6 @@
 label: Date
 icon: calendar
-description: A date input field with an optional label, date constraints, and ISO8601 format validation.
+description: "Form field with native date picker interface."
 structures:
   - formBlocks
 value:

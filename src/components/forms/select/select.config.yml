@@ -1,6 +1,6 @@
 label: Select
 icon: view_list
-description: A dropdown select field with an optional label.
+description: "Dropdown form field for choosing one option."
 structures:
   - formBlocks
 value:

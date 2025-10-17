@@ -1,6 +1,6 @@
 label: Rich text
 icon: edit_note
-description: "A catch-all for all content types. Can contain headings, paragraphs, images, bullets. Use text prop for Markdown content or slot for HTML content."
+description: "Content component for markdown-formatted text."
 structures:
   - containerBlocks
   - cardBlocks

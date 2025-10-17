@@ -1,6 +1,6 @@
 label: List
 icon: list
-description: "Displays items in a list with icons as markers. (For traditional bulleted or numbered lists, use rich text instead.)"
+description: "List component for ordered or unordered items."
 structures:
   - containerBlocks
   - cardBlocks

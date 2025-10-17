@@ -1,6 +1,6 @@
 label: Footer
 icon: footer
-description: "A footer component with logo, navigation links, social media links, and legal text."
+description: "Footer block with logo, links, and legal information."
 structures: []
 value:
   _component: blocks/footer

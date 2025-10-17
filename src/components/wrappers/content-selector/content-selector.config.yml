@@ -1,6 +1,6 @@
 label: Content Selector
 icon: view_sidebar
-description: Switches between related content panels using tab buttons.
+description: "Tabbed interface for switching between content panels."
 structures:
   - containerBlocks
   - splitBlocks

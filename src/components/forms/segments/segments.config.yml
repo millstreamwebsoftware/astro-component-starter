@@ -1,6 +1,6 @@
 label: Segments
 icon: radio_button_partial
-description: A segmented control component using radio buttons or checkboxes with optional icons.
+description: "Segmented control form field with connected buttons."
 structures:
   - formBlocks
 value:

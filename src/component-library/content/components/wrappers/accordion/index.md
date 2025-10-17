@@ -1,5 +1,6 @@
 ---
 title: Accordion
+overview: "An interactive component for expandable/collapsible content panels. Perfect for FAQs and documentation. Configure single or multiple open items."
 slots:
   - title: default
     description: The contents for the the Accordion.

@@ -1,5 +1,6 @@
 ---
 title: Segments
+overview: "A segmented control form field with connected buttons. A compact alternative to radio buttons or checkboxes. Supports text labels, icons, or icon-only display."
 examples:
   - title: Basic
     slugs:

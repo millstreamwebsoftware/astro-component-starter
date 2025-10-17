@@ -1,5 +1,6 @@
 ---
 title: Definition List
+overview: "A semantic list component for term/definition pairs. Perfect for glossaries, FAQs, and content requiring label/description pairings. Supports markdown formatting in definitions."
 slots:
   - title: default
     description: The content inside the DefinitionList.

@@ -1,6 +1,6 @@
 label: Hidden
 icon: eye-slash
-description: A hidden form field for storing data that should not be visible to users.
+description: "Hidden form field for tracking data."
 structures:
   - formBlocks
 value:

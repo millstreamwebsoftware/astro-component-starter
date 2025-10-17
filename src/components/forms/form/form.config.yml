@@ -1,6 +1,6 @@
 label: Form
 icon: checklist_rtl
-description: A form element that groups related form controls and handles form submission.
+description: "Container component for form field components."
 structures:
   - containerBlocks
   - cardBlocks

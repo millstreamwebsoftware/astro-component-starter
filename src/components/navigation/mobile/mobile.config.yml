@@ -1,6 +1,6 @@
 label: Mobile Navigation
 icon: device-phone-mobile
-description: A mobile navigation with hamburger menu and slide-out panel.
+description: "Responsive navigation with full-screen overlay."
 structures: []
 value:
   _component: navigation/mobile/mobile
