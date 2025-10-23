@@ -60,6 +60,7 @@ const aspectRatio = imageWidth && imageHeight ? imageHeight / imageWidth : 0.75;
     sizes={sizes}
   />
   <img
+    data-editable="image"
     src={source}
     alt={alt || ""}
     loading={priority ? "eager" : "lazy"}

@@ -79,13 +79,14 @@ if (isRemoteUrl) {
       decoding={priority ? "sync" : "async"}
       fetchpriority={priority ? "high" : undefined}
       inferSize={useInferSize}
+      data-editable="image"
       pictureAttributes={{
         ...htmlAttributes,
       }}
     />
   ) : (
     <picture {...htmlAttributes}>
-      <img src={source} alt={alt || ""} />
+      <img data-editable="image" src={source} alt={alt || ""} />
     </picture>
   )
 }

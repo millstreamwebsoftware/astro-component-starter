@@ -65,7 +65,7 @@ const positionClass = `position-${positionVertical}-${positionHorizontal}`;
       )
     ) : (
       <picture>
-        <img src="" alt={alt || ""} />
+        <img data-editable="image" src={source} alt={alt || ""} />
       </picture>
     )
   }
