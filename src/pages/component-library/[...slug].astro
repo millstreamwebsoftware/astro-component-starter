@@ -3,6 +3,11 @@ import LibraryLayout from "@component-library/layouts/LibraryLayout.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
+  // Skip component library routes if DISABLE_COMPONENT_LIBRARY is set
+  if (process.env.DISABLE_COMPONENT_LIBRARY === "true") {
+    return [];
+  }
+
   const pages = await getCollection("docs-pages");
 
   const paths: Array<{ params: { slug: string }; props: { page: any } }> = [];

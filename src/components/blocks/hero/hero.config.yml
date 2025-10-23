@@ -1,8 +1,7 @@
 label: Hero
 icon: hero
 description: "Prominent section block for landing pages."
-structures:
-  - pageBlocks
+structures: []
 value:
   _component: blocks/hero
   heading: ""

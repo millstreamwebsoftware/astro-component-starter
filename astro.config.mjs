@@ -31,7 +31,14 @@ export default defineConfig({
       iconDir: path.resolve(__dirname, "src/icons"),
     }),
     sitemap({
-      filter: (page) => !page.includes("/component-library"),
+      filter: (page) => {
+        // Always exclude component library from sitemap if disabled
+        if (process.env.DISABLE_COMPONENT_LIBRARY === "true") {
+          return !page.includes("/component-library");
+        }
+        // If not disabled, still exclude from sitemap (existing behavior)
+        return !page.includes("/component-library");
+      },
     }),
   ],
   vite: {

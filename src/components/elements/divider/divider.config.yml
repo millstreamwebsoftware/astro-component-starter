@@ -11,7 +11,7 @@ structures:
   - contentSelectorBlocks
 value:
   _component: elements/divider
-  paddingVertical: ""
+  paddingVertical: "lg"
 preview:
   text: Divider
   subtext:

@@ -6,6 +6,11 @@ import { existsSync, readFileSync } from "fs";
 import yaml from "js-yaml";
 
 export async function getStaticPaths() {
+  // Skip component library routes if DISABLE_COMPONENT_LIBRARY is set
+  if (process.env.DISABLE_COMPONENT_LIBRARY === "true") {
+    return [];
+  }
+
   const schemaFiles = import.meta.glob("../../../components/**/schema.ts", {
     eager: true,
   });
