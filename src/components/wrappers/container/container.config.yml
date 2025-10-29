@@ -24,7 +24,7 @@ preview:
     - key: label
     - Container
   subtext:
-    - template: A container containing {contentBlocks|array_length} content {"block"|pluralize=slides}
+    - template: Contains {contentBlocks|array_length} content {"block"|pluralize=contentBlocks}
     - Add content blocks to the container
 picker_preview:
   text: Container

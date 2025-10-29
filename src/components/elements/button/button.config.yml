@@ -5,7 +5,7 @@ structures:
   - buttonBlocks
 value:
   _component: elements/button
-  text: ""
+  text: "My Button"
   link: ""
   iconName: ""
   iconPosition: before
