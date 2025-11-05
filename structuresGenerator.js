@@ -58,6 +58,7 @@ async function generateStructures() {
       // e.g., wrappers/container/container -> wrappers/container
       if (config.value && config.value._component) {
         const parts = config.value._component.split("/");
+
         if (parts.length >= 2 && parts[parts.length - 1] === parts[parts.length - 2]) {
           parts.pop(); // Remove the duplicate last segment
           config.value._component = parts.join("/");
@@ -140,7 +141,7 @@ async function generateStructures() {
   // Write back to cloudcannon.config.yml
   const yamlContent = yaml.dump(updatedConfig, {
     lineWidth: -1, // Don't wrap lines
-    quotingType: '"',
+    quotingType: "'",
     forceQuotes: false,
     noRefs: false,
   });

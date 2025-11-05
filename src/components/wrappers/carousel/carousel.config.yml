@@ -54,8 +54,11 @@ _structures:
     values:
       - label: Carousel Slide
         value:
+          _component: wrappers/carousel/carousel-slide
           contentBlocks: []
         _inputs:
+          _component:
+            hidden: true
           contentBlocks:
             type: array
             options:

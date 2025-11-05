@@ -78,15 +78,23 @@ const carouselStyles = `
   {...dataAttributes}
 >
   <div class="viewport">
-    <div class="track" data-editable="array" data-prop="slides">
+    <div
+      class="track"
+      data-editable="array"
+      data-prop="items"
+      data-component-key="_component"
+      data-id-key="_component"
+      data-prop="slides"
+    >
       {
         slides.length > 0 ? (
           slides.map((slide: any, index: number) => (
-            <CarouselSlide
-              contentBlocks={slide.contentBlocks}
-              data-editable="array-item"
-              aria-label={`Slide ${index + 1} of ${slides.length}`}
-            />
+            <editable-array-item data-component={slide._component}>
+              <CarouselSlide
+                contentBlocks={slide.contentBlocks}
+                aria-label={`Slide ${index + 1} of ${slides.length}`}
+              />
+            </editable-array-item>
           ))
         ) : (
           <slot />

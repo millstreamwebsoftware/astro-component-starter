@@ -5,7 +5,7 @@ collections_config:
   pages:
     path: src/content/pages
     glob:
-      - "**/*.md"
+      - '**/*.md'
     url: /[full_slug]/
     icon: laptop_mac
     _enabled_editors:
@@ -20,7 +20,7 @@ collections_config:
         path: .cloudcannon/schemas/page.md
         remove_extra_inputs: false
     create:
-      path: "[relative_base_path]/{filename|slugify|lowercase}.md"
+      path: '[relative_base_path]/{filename|slugify|lowercase}.md'
     new_preview_url: /
     _inputs:
       title:
@@ -739,7 +739,7 @@ _structures:
         description: Two-column layout for side-by-side content.
         value:
           _component: wrappers/split
-          label: ""
+          label: ''
           firstColumnContentBlocks: []
           secondColumnContentBlocks: []
           distributionMode: half
@@ -819,7 +819,7 @@ _structures:
         description: Arranges content into a grid that adapts to screen size.
         value:
           _component: wrappers/grid
-          label: ""
+          label: ''
           layout: center
           minItemWidth: 280
           maxItemWidth: 400
@@ -888,7 +888,7 @@ _structures:
         description: Lets users switch between different content panels using tabs.
         value:
           _component: wrappers/content-selector
-          label: ""
+          label: ''
           items: null
           navigationPosition: start
         preview:
@@ -918,229 +918,13 @@ _structures:
                   name: Start
                 - id: top
                   name: Top
-      - &ref_20
-        label: Carousel
-        icon: image
-        description: Displays multiple items in a sliding gallery.
-        value:
-          _component: wrappers/carousel
-          label: ""
-          slides: []
-          autoPlay: false
-          autoScroll: false
-          slideWidthPercent: 100
-          minSlideWidth: 0
-        preview:
-          text:
-            - key: label
-            - Carousel
-          subtext:
-            - template: A carousel containing {slides|array_length} {"slide"|pluralize=slides}
-            - Add slides to the carousel
-        picker_preview:
-          text: Carousel
-          subtext: A carousel component for displaying slides with navigation controls
-          icon: image
-        _inputs:
-          label:
-            comment: Optional label for the carousel to help identify it in the editor.
-            type: text
-          slides:
-            comment: Array of slides to display in the carousel.
-            type: array
-            options:
-              structures: _structures.slides
-          autoPlay:
-            comment: Enable auto-play functionality.
-            type: switch
-          autoScroll:
-            comment: Enable auto-scroll functionality.
-            type: switch
-          slideWidthPercent:
-            comment: Width of each slide as a percentage of the carousel (e.g., 33, 50, 100).
-            type: range
-            options:
-              min: 0
-              max: 100
-              step: 1
-          minSlideWidth:
-            comment: Minimum width of slides in pixels. Prevents slides from getting too small.
-            type: number
-      - &ref_3
-        label: Card
-        icon: crop_square
-        description: Groups related content within a section.
-        value:
-          _component: wrappers/card
-          label: null
-          contentBlocks: []
-          paddingHorizontal: sm
-          paddingVertical: sm
-          colorScheme: default
-          backgroundColor: base
-          backgroundImage:
-            source: null
-            alt: null
-            positionVertical: top
-            positionHorizontal: center
-          link: null
-          rounded: false
-          border: false
-          showBeforeAfter: false
-          beforeContentBlocks: []
-          afterContentBlocks: []
-        preview:
-          text:
-            - key: label
-            - Card
-        picker_preview:
-          text: Card
-          subtext: A container component that provides card layout with background options and padding controls.
-          icon: crop_square
-        _inputs:
-          label:
-            type: text
-            comment: Optional label for the card to help identify it in the editor.
-          contentBlocks:
-            type: array
-            comment: Content inside the main area of the card, with padding.
-            options:
-              structures: _structures.cardBlocks
-          beforeContentBlocks:
-            type: array
-            comment: Content that appears above the main card area, without padding.
-            hidden: "!showBeforeAfter"
-            options:
-              structures: _structures.cardBlocks
-          afterContentBlocks:
-            type: array
-            comment: Content that appears below the main card area, without padding.
-            hidden: "!showBeforeAfter"
-            options:
-              structures: _structures.cardBlocks
-          showBeforeAfter:
-            type: switch
-            comment: Whether to show the before/after content blocks used to add content outside the card's padding.
-          paddingHorizontal:
-            type: select
-            comment: Horizontal padding applied to the card content.
-            options:
-              values:
-                - id: xs
-                  name: Extra Small
-                - id: sm
-                  name: Small
-                - id: md
-                  name: Medium
-                - id: lg
-                  name: Large
-                - id: xl
-                  name: Extra Large
-                - id: 2xl
-                  name: 2xl
-          paddingVertical:
-            type: select
-            comment: Vertical padding applied to the card content.
-            options:
-              values:
-                - id: xs
-                  name: Extra Small
-                - id: sm
-                  name: Small
-                - id: md
-                  name: Medium
-                - id: lg
-                  name: Large
-                - id: xl
-                  name: Extra Large
-                - id: 2xl
-                  name: 2xl
-          colorScheme:
-            type: select
-            comment: Color scheme theme for the card.
-            options:
-              values:
-                - id: default
-                  name: Default
-                - id: contrast
-                  name: Contrast
-          backgroundColor:
-            type: select
-            comment: Background color for the card.
-            options:
-              values:
-                - id: none
-                  name: None
-                - id: base
-                  name: Base
-                - id: surface
-                  name: Surface
-                - id: accent
-                  name: Accent
-                - id: highlight
-                  name: Highlight
-          backgroundImage:
-            type: object
-            comment: Background image configuration for the card.
-            options:
-              preview:
-                icon: image
-                text:
-                  - key: alt
-                  - Background Image
-                subtext:
-                  - key: source
-                  - Add an image source
-                image:
-                  - key: source
-          backgroundImage.source:
-            comment: URL or path to the background image.
-            type: image
-            options:
-              paths:
-                uploads: src/assets/images
-                static: ""
-          backgroundImage.alt:
-            comment: Alt text for the background image.
-            type: text
-          backgroundImage.positionVertical:
-            comment: Vertical position of the background image.
-            type: select
-            options:
-              values:
-                - id: top
-                  name: Top
-                - id: center
-                  name: Center
-                - id: bottom
-                  name: Bottom
-          backgroundImage.positionHorizontal:
-            comment: Horizontal position of the background image.
-            type: select
-            options:
-              values:
-                - id: left
-                  name: Left
-                - id: center
-                  name: Center
-                - id: right
-                  name: Right
-          link:
-            type: url
-            comment: URL to make the entire card clickable. Leave empty for a non-clickable card.
-          rounded:
-            type: switch
-            comment: Whether to apply rounded corners to the card.
-          border:
-            type: switch
-            comment: Whether to apply a border to the card.
       - &ref_21
         label: Container
         icon: width_full
         description: Used to group and style large sections of a page.
         value:
           _component: wrappers/container
-          label: ""
+          label: ''
           contentBlocks: []
           maxContentWidth: 2xl
           paddingHorizontal: md
@@ -1148,8 +932,8 @@ _structures:
           colorScheme: null
           backgroundColor: base
           backgroundImage:
-            source: ""
-            alt: ""
+            source: ''
+            alt: ''
             positionVertical: top
             positionHorizontal: center
           rounded: false
@@ -1278,7 +1062,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ""
+                static: ''
           backgroundImage.alt:
             comment: Alt text for the background image.
             type: textarea
@@ -1307,6 +1091,222 @@ _structures:
           rounded:
             type: switch
             comment: Whether to apply rounded corners to the container.
+      - &ref_3
+        label: Card
+        icon: crop_square
+        description: Groups related content within a section.
+        value:
+          _component: wrappers/card
+          label: null
+          contentBlocks: []
+          paddingHorizontal: sm
+          paddingVertical: sm
+          colorScheme: default
+          backgroundColor: base
+          backgroundImage:
+            source: null
+            alt: null
+            positionVertical: top
+            positionHorizontal: center
+          link: null
+          rounded: false
+          border: false
+          showBeforeAfter: false
+          beforeContentBlocks: []
+          afterContentBlocks: []
+        preview:
+          text:
+            - key: label
+            - Card
+        picker_preview:
+          text: Card
+          subtext: A container component that provides card layout with background options and padding controls.
+          icon: crop_square
+        _inputs:
+          label:
+            type: text
+            comment: Optional label for the card to help identify it in the editor.
+          contentBlocks:
+            type: array
+            comment: Content inside the main area of the card, with padding.
+            options:
+              structures: _structures.cardBlocks
+          beforeContentBlocks:
+            type: array
+            comment: Content that appears above the main card area, without padding.
+            hidden: '!showBeforeAfter'
+            options:
+              structures: _structures.cardBlocks
+          afterContentBlocks:
+            type: array
+            comment: Content that appears below the main card area, without padding.
+            hidden: '!showBeforeAfter'
+            options:
+              structures: _structures.cardBlocks
+          showBeforeAfter:
+            type: switch
+            comment: Whether to show the before/after content blocks used to add content outside the card's padding.
+          paddingHorizontal:
+            type: select
+            comment: Horizontal padding applied to the card content.
+            options:
+              values:
+                - id: xs
+                  name: Extra Small
+                - id: sm
+                  name: Small
+                - id: md
+                  name: Medium
+                - id: lg
+                  name: Large
+                - id: xl
+                  name: Extra Large
+                - id: 2xl
+                  name: 2xl
+          paddingVertical:
+            type: select
+            comment: Vertical padding applied to the card content.
+            options:
+              values:
+                - id: xs
+                  name: Extra Small
+                - id: sm
+                  name: Small
+                - id: md
+                  name: Medium
+                - id: lg
+                  name: Large
+                - id: xl
+                  name: Extra Large
+                - id: 2xl
+                  name: 2xl
+          colorScheme:
+            type: select
+            comment: Color scheme theme for the card.
+            options:
+              values:
+                - id: default
+                  name: Default
+                - id: contrast
+                  name: Contrast
+          backgroundColor:
+            type: select
+            comment: Background color for the card.
+            options:
+              values:
+                - id: none
+                  name: None
+                - id: base
+                  name: Base
+                - id: surface
+                  name: Surface
+                - id: accent
+                  name: Accent
+                - id: highlight
+                  name: Highlight
+          backgroundImage:
+            type: object
+            comment: Background image configuration for the card.
+            options:
+              preview:
+                icon: image
+                text:
+                  - key: alt
+                  - Background Image
+                subtext:
+                  - key: source
+                  - Add an image source
+                image:
+                  - key: source
+          backgroundImage.source:
+            comment: URL or path to the background image.
+            type: image
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ''
+          backgroundImage.alt:
+            comment: Alt text for the background image.
+            type: text
+          backgroundImage.positionVertical:
+            comment: Vertical position of the background image.
+            type: select
+            options:
+              values:
+                - id: top
+                  name: Top
+                - id: center
+                  name: Center
+                - id: bottom
+                  name: Bottom
+          backgroundImage.positionHorizontal:
+            comment: Horizontal position of the background image.
+            type: select
+            options:
+              values:
+                - id: left
+                  name: Left
+                - id: center
+                  name: Center
+                - id: right
+                  name: Right
+          link:
+            type: url
+            comment: URL to make the entire card clickable. Leave empty for a non-clickable card.
+          rounded:
+            type: switch
+            comment: Whether to apply rounded corners to the card.
+          border:
+            type: switch
+            comment: Whether to apply a border to the card.
+      - &ref_20
+        label: Carousel
+        icon: image
+        description: Displays multiple items in a sliding gallery.
+        value:
+          _component: wrappers/carousel
+          label: ''
+          slides: []
+          autoPlay: false
+          autoScroll: false
+          slideWidthPercent: 100
+          minSlideWidth: 0
+        preview:
+          text:
+            - key: label
+            - Carousel
+          subtext:
+            - template: A carousel containing {slides|array_length} {"slide"|pluralize=slides}
+            - Add slides to the carousel
+        picker_preview:
+          text: Carousel
+          subtext: A carousel component for displaying slides with navigation controls
+          icon: image
+        _inputs:
+          label:
+            comment: Optional label for the carousel to help identify it in the editor.
+            type: text
+          slides:
+            comment: Array of slides to display in the carousel.
+            type: array
+            options:
+              structures: _structures.slides
+          autoPlay:
+            comment: Enable auto-play functionality.
+            type: switch
+          autoScroll:
+            comment: Enable auto-scroll functionality.
+            type: switch
+          slideWidthPercent:
+            comment: Width of each slide as a percentage of the carousel (e.g., 33, 50, 100).
+            type: range
+            options:
+              min: 0
+              max: 100
+              step: 1
+          minSlideWidth:
+            comment: Minimum width of slides in pixels. Prevents slides from getting too small.
+            type: number
       - &ref_4
         label: Button Group
         icon: rectangle
@@ -1399,10 +1399,10 @@ _structures:
         description: Displays customer quotes and reviews.
         value:
           _component: typography/testimonial
-          text: ""
-          authorName: ""
-          authorDescription: ""
-          authorImage: ""
+          text: ''
+          authorName: ''
+          authorDescription: ''
+          authorImage: ''
           alignX: start
         preview:
           text:
@@ -1443,7 +1443,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ""
+                static: ''
           alignX:
             comment: The horizontal alignment of the testimonial.
             type: select
@@ -1459,7 +1459,7 @@ _structures:
         description: Paragraph for plain text content.
         value:
           _component: typography/simple-text
-          text: ""
+          text: ''
           alignX: start
           size: default
         preview:
@@ -1515,7 +1515,7 @@ _structures:
         description: Content component for markdown-formatted text.
         value:
           _component: typography/rich-text
-          text: ""
+          text: ''
           alignX: start
         preview:
           subtext:
@@ -1626,12 +1626,85 @@ _structures:
                 - id: 2xl
                   name: 2xl
       - &ref_10
+        label: Definition List
+        icon: dns
+        description: Lists term/definition pairs for structured content.
+        value:
+          _component: typography/definition-list
+          items: []
+          alignX: start
+        preview:
+          subtext:
+            - template: Contains {items|array_length} list {'item'|pluralize=items}
+            - Add definition list items
+        picker_preview:
+          text: Definition List
+          subtext: For displaying key-value pairs. Ideal for glossaries, opening times, etc.
+          icon: dns
+        _inputs:
+          items:
+            type: array
+            label: List Items
+            options:
+              structures: _structures.definitionListItems
+          alignX:
+            type: select
+            comment: The horizontal alignment of the definition list items.
+            options:
+              values:
+                - id: start
+                  name: Start
+                - id: center
+                  name: Center
+                - id: end
+                  name: End
+      - &ref_11
+        label: Counter
+        icon: speed
+        description: Animated counter for highlighting key stats or figures.
+        value:
+          _component: typography/counter
+          number: ''
+          prefix: ''
+          suffix: ''
+          alignX: start
+        preview:
+          subtext:
+            - template: '{prefix}{number}{suffix}'
+            - Add counter details
+        picker_preview:
+          text: Counter
+          subtext: Animated number that counts up when visible.
+          icon: speed
+        _inputs:
+          number:
+            type: number
+            comment: The number to count to.
+            options:
+              min: 0
+              step: 1
+          prefix:
+            comment: Text immediately before the number.
+          suffix:
+            comment: Text immediately after the number.
+          alignX:
+            comment: The horizontal alignment of the counter.
+            type: select
+            options:
+              values:
+                - id: start
+                  name: Start
+                - id: center
+                  name: Center
+                - id: end
+                  name: End
+      - &ref_12
         label: Heading
         icon: title
         description: Headings for content hierarchy.
         value:
           _component: typography/heading
-          text: ""
+          text: ''
           level: h2
           size: default
           alignX: start
@@ -1709,79 +1782,6 @@ _structures:
                   name: Before
                 - id: after
                   name: After
-      - &ref_11
-        label: Definition List
-        icon: dns
-        description: Lists term/definition pairs for structured content.
-        value:
-          _component: typography/definition-list
-          items: []
-          alignX: start
-        preview:
-          subtext:
-            - template: Contains {items|array_length} list {'item'|pluralize=items}
-            - Add definition list items
-        picker_preview:
-          text: Definition List
-          subtext: For displaying key-value pairs. Ideal for glossaries, opening times, etc.
-          icon: dns
-        _inputs:
-          items:
-            type: array
-            label: List Items
-            options:
-              structures: _structures.definitionListItems
-          alignX:
-            type: select
-            comment: The horizontal alignment of the definition list items.
-            options:
-              values:
-                - id: start
-                  name: Start
-                - id: center
-                  name: Center
-                - id: end
-                  name: End
-      - &ref_12
-        label: Counter
-        icon: speed
-        description: Animated counter for highlighting key stats or figures.
-        value:
-          _component: typography/counter
-          number: ""
-          prefix: ""
-          suffix: ""
-          alignX: start
-        preview:
-          subtext:
-            - template: "{prefix}{number}{suffix}"
-            - Add counter details
-        picker_preview:
-          text: Counter
-          subtext: Animated number that counts up when visible.
-          icon: speed
-        _inputs:
-          number:
-            type: number
-            comment: The number to count to.
-            options:
-              min: 0
-              step: 1
-          prefix:
-            comment: Text immediately before the number.
-          suffix:
-            comment: Text immediately after the number.
-          alignX:
-            comment: The horizontal alignment of the counter.
-            type: select
-            options:
-              values:
-                - id: start
-                  name: Start
-                - id: center
-                  name: Center
-                - id: end
-                  name: End
       - &ref_13
         label: Form
         icon: checklist_rtl
@@ -1813,11 +1813,11 @@ _structures:
         description: Video component for YouTube, Vimeo, and HTML5 sources.
         value:
           _component: elements/video
-          type: ""
-          id: ""
-          title: ""
-          source: ""
-          poster: ""
+          type: ''
+          id: ''
+          title: ''
+          source: ''
+          poster: ''
         preview:
           icon: videocam
           text:
@@ -1909,8 +1909,8 @@ _structures:
         description: Optimized image component for local and remote sources.
         value:
           _component: elements/image
-          source: ""
-          alt: ""
+          source: ''
+          alt: ''
           rounded: false
           aspectRatio: none
           positionVertical: center
@@ -1933,7 +1933,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ""
+                static: ''
           alt:
             type: textarea
             comment: Alternative text for accessibility.
@@ -1987,7 +1987,7 @@ _structures:
         description: SVG icon component.
         value:
           _component: elements/icon
-          name: ""
+          name: ''
           size: lg
           color: default
           background: false
@@ -2075,8 +2075,8 @@ _structures:
         description: Responsive wrapper for third-party embeds.
         value:
           _component: elements/embed
-          source: ""
-          title: ""
+          source: ''
+          title: ''
           aspectRatio: landscape
         preview:
           icon: data_object
@@ -2183,8 +2183,8 @@ _structures:
     values:
       - *ref_0
       - *ref_1
-      - *ref_20
       - *ref_3
+      - *ref_20
       - *ref_4
       - *ref_5
       - *ref_6
@@ -2229,8 +2229,8 @@ _structures:
     values:
       - *ref_1
       - *ref_2
-      - *ref_20
       - *ref_3
+      - *ref_20
       - *ref_4
       - *ref_5
       - *ref_6
@@ -2271,24 +2271,11 @@ _structures:
             type: array
             options:
               structures: _structures.contentSelectorBlocks
-  slides:
+  pageBlocks:
     id_key: _component
     style: modal
     values:
-      - label: Carousel Slide
-        value:
-          contentBlocks: []
-        _inputs:
-          contentBlocks:
-            type: array
-            options:
-              structures: _structures.carouselBlocks
-        preview:
-          icon: transition_slide
-          text: Carousel Slide
-          subtext:
-            - template: Contains {contentBlocks|array_length} content {"block"|pluralize=contentBlocks}
-            - Add one or more content blocks to the grid item
+      - *ref_21
   gridItemBlocks:
     id_key: _component
     style: modal
@@ -2310,11 +2297,27 @@ _structures:
       - *ref_17
       - *ref_18
       - *ref_19
-  pageBlocks:
+  slides:
     id_key: _component
     style: modal
     values:
-      - *ref_21
+      - label: Carousel Slide
+        value:
+          _component: wrappers/carousel/carousel-slide
+          contentBlocks: []
+        _inputs:
+          _component:
+            hidden: true
+          contentBlocks:
+            type: array
+            options:
+              structures: _structures.carouselBlocks
+        preview:
+          icon: transition_slide
+          text: Carousel Slide
+          subtext:
+            - template: Contains {contentBlocks|array_length} content {"block"|pluralize=contentBlocks}
+            - Add one or more content blocks to the grid item
   cardBlocks:
     id_key: _component
     style: modal
@@ -2377,8 +2380,8 @@ _structures:
     values:
       - label: List Item
         value:
-          text: ""
-          iconName: ""
+          text: ''
+          iconName: ''
           iconColor: default
         preview:
           icon: text_fields
@@ -2439,8 +2442,8 @@ _structures:
     values:
       - label: Definition List Item
         value:
-          title: ""
-          text: ""
+          title: ''
+          text: ''
         preview:
           icon: list
           text:
@@ -2525,8 +2528,8 @@ _structures:
       - label: Navigation Link
         icon: link
         value:
-          name: ""
-          path: ""
+          name: ''
+          path: ''
         _inputs:
           name:
             type: text
@@ -2541,8 +2544,8 @@ _structures:
       - label: Social Link
         icon: share
         value:
-          icon: ""
-          link: ""
+          icon: ''
+          link: ''
         _inputs:
           icon:
             type: text
@@ -2658,7 +2661,7 @@ _structures:
           iconPosition:
             type: select
             comment: The position of the icon relative to the text.
-            hidden: "!iconName"
+            hidden: '!iconName'
             options:
               values:
                 - id: before
@@ -2668,7 +2671,7 @@ _structures:
           hideText:
             type: switch
             comment: Whether to hide the button text and show only the icon.
-            hidden: "!iconName\""
+            hidden: '!iconName'
           disabled:
             type: switch
             comment: Whether the submit button is disabled.
@@ -2826,8 +2829,8 @@ _structures:
         description: Hidden form field for storing data.
         value:
           _component: forms/hidden
-          name: ""
-          value: ""
+          name: ''
+          value: ''
         preview:
           text:
             - template: Hidden - {name}
@@ -2843,44 +2846,6 @@ _structures:
           value:
             type: text
             comment: The value to be stored in the hidden field.
-      - label: File Upload
-        icon: upload
-        description: Form field for uploading files.
-        value:
-          _component: forms/file-upload
-          label: null
-          name: null
-          required: false
-          accept: null
-          multiple: false
-        preview:
-          subtext:
-            - key: label
-            - key: name
-            - Enter a name for the file upload form field.
-        picker_preview:
-          text: File Upload
-          subtext: A file input field with an optional label.
-          icon: upload
-        _inputs:
-          label:
-            type: text
-            comment: The label text for the file upload field.
-          name:
-            type: text
-            comment: A unique name attribute for the file upload field.
-            options:
-              required: true
-              required_message: Only form elements with a name will have their values passed when submitting a form.
-          required:
-            type: switch
-            comment: Whether the field is required.
-          accept:
-            type: text
-            comment: Comma-separated list of accepted file types (eg. '.jpg,.png,.pdf').
-          multiple:
-            type: switch
-            comment: Whether multiple files can be selected.
       - label: Date
         icon: calendar
         description: Form field for selecting a date.
@@ -2920,6 +2885,44 @@ _structures:
           max:
             type: date
             comment: The maximum date allowed (ISO8601 format).
+      - label: File Upload
+        icon: upload
+        description: Form field for uploading files.
+        value:
+          _component: forms/file-upload
+          label: null
+          name: null
+          required: false
+          accept: null
+          multiple: false
+        preview:
+          subtext:
+            - key: label
+            - key: name
+            - Enter a name for the file upload form field.
+        picker_preview:
+          text: File Upload
+          subtext: A file input field with an optional label.
+          icon: upload
+        _inputs:
+          label:
+            type: text
+            comment: The label text for the file upload field.
+          name:
+            type: text
+            comment: A unique name attribute for the file upload field.
+            options:
+              required: true
+              required_message: Only form elements with a name will have their values passed when submitting a form.
+          required:
+            type: switch
+            comment: Whether the field is required.
+          accept:
+            type: text
+            comment: Comma-separated list of accepted file types (eg. '.jpg,.png,.pdf').
+          multiple:
+            type: switch
+            comment: Whether multiple files can be selected.
       - label: Choice Group
         icon: check_box
         description: Form field for selecting one or more options.
@@ -3076,8 +3079,8 @@ _structures:
         value:
           _component: elements/button
           text: My Button
-          link: ""
-          iconName: ""
+          link: ''
+          iconName: ''
           iconPosition: before
           hideText: false
           variant: primary
@@ -3116,7 +3119,7 @@ _structures:
           iconPosition:
             type: select
             comment: The position of the icon relative to the text.
-            hidden: "!iconName"
+            hidden: '!iconName'
             options:
               values:
                 - id: before
@@ -3125,7 +3128,7 @@ _structures:
                   name: After
           hideText:
             type: switch
-            hidden: "!iconName"
+            hidden: '!iconName'
             comment: Whether to hide the button text and show only the icon.
           variant:
             type: select

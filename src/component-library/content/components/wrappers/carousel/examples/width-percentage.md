@@ -7,7 +7,8 @@ blocks:
   slideWidthPercent: 33
   minSlideWidth: 200
   slides:
-    - contentBlocks:
+    - _component: wrappers/carousel/carousel-slide
+      contentBlocks:
         - _component: "wrappers/card"
           paddingHorizontal: xs
           paddingVertical: sm
@@ -15,7 +16,8 @@ blocks:
             - _component: "elements/image"
               source: /src/assets/images/component-library/quiet-street.jpg
               alt: "Quiet Street"
-    - contentBlocks:
+    - _component: wrappers/carousel/carousel-slide
+      contentBlocks:
         - _component: "wrappers/card"
           paddingHorizontal: xs
           paddingVertical: sm
@@ -23,7 +25,8 @@ blocks:
             - _component: "elements/image"
               source: /src/assets/images/component-library/sunset.jpg
               alt: "Sunset"
-    - contentBlocks:
+    - _component: wrappers/carousel/carousel-slide
+      contentBlocks:
         - _component: "wrappers/card"
           paddingHorizontal: xs
           paddingVertical: sm
@@ -31,7 +34,8 @@ blocks:
             - _component: "elements/image"
               source: /src/assets/images/component-library/sheep.jpg
               alt: "Sheep"
-    - contentBlocks:
+    - _component: wrappers/carousel/carousel-slide
+      contentBlocks:
         - _component: "wrappers/card"
           paddingHorizontal: xs
           paddingVertical: sm
@@ -39,7 +43,8 @@ blocks:
             - _component: "elements/image"
               source: /src/assets/images/component-library/castle.jpg
               alt: "Castle"
-    - contentBlocks:
+    - _component: wrappers/carousel/carousel-slide
+      contentBlocks:
         - _component: "wrappers/card"
           paddingHorizontal: xs
           paddingVertical: sm
