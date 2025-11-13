@@ -17,6 +17,7 @@ These principles guide how components are built and maintained:
 2. **🚀 Bleeding Edge Performance** — Built for the fastest delivery possible: static-rendered, minimal payloads, zero waste.
 3. **🧩 Modular by Design** — Small, focused components that can be combined to create anything.
 4. **✏️ Controlled Editing** — Developers give editors the right amount of control to create without breaking consistency.
+5. **🎨 Unbranded & Adaptable** — Ships without visual opinion, making it fast to restyle, rebrand, and align with any design direction.
 
 ## Components
 
