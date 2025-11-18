@@ -131,15 +131,6 @@ const Tag = link ? "a" : "div";
       transform 0.2s ease,
       box-shadow 0.2s ease;
 
-    /* Only apply margin when card is a direct child of main or editable-array-item */
-    /* Nested cards (inside containers, grids, etc.) won't get margin */
-    :where(.container, .card, .split) > .outer-content > .content &,
-    :where(.container, .card, .split) > .outer-content > .content > editable-array > editable-array-item > &,
-    .grid > editable-array > editable-array-item > &,
-    .grid > & {
-      margin-top: 0;
-    }
-
     &.rounded {
       border-radius: var(--radius-md);
     }
