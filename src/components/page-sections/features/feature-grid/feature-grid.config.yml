@@ -104,11 +104,11 @@ _structures:
         icon: apps
         value:
           _component: page-sections/features/feature-grid/feature-item
-          title: ""
-          description: ""
-          iconName: ""
-          iconColor: default
-          iconBackground: false
+          title: "Feature title"
+          description: "Feature description placeholder text that will be replaced with actual content."
+          iconName: "bolt"
+          iconColor: yellow
+          iconBackground: true
         preview:
           text:
             - key: title
