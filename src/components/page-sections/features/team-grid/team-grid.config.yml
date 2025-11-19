@@ -68,6 +68,7 @@ _structures:
       - label: Team Member
         icon: person
         value:
+          _component: page-sections/features/team-grid/team-item
           name: "Team member name"
           role: "Job title"
           bio: "Brief bio or description of the team member."

@@ -1661,6 +1661,7 @@ _structures:
       - label: Team Member
         icon: person
         value:
+          _component: page-sections/features/team-grid/team-item
           name: Team member name
           role: Job title
           bio: Brief bio or description of the team member.
@@ -1766,6 +1767,7 @@ _structures:
       - label: Feature
         icon: apps
         value:
+          _component: page-sections/features/feature-grid/feature-item
           title: Feature title
           description: Feature description placeholder text that will be replaced with actual content.
           iconName: bolt
@@ -2247,42 +2249,6 @@ _structures:
             type: switch
             comment: Whether to apply a border to the card.
       - &ref_4
-        label: Accordion
-        icon: expand_all
-        description: Interactive component for showing and hiding content panels.
-        value:
-          _component: building-blocks/wrappers/accordion
-          label: null
-          items: []
-          openFirst: false
-          singleOpen: false
-        preview:
-          text:
-            - key: label
-            - Accordion
-          subtext:
-            - template: An accordion containing {items|array_length} {"item"|pluralize=items}
-            - Add items to the accordion
-        picker_preview:
-          text: Accordion
-          subtext: Interactive component for showing and hiding content panels.
-          icon: expand_all
-        _inputs:
-          label:
-            comment: Optional label for the accordion to help identify it in the editor.
-            type: text
-          items:
-            comment: The items to display in the accordion.
-            type: array
-            options:
-              structures: _structures.accordionItems
-          openFirst:
-            comment: Whether the first item will be open by default.
-            type: switch
-          singleOpen:
-            comment: Whether only one item can be open at a time within this accordion.
-            type: switch
-      - &ref_5
         label: Button Group
         icon: rectangle
         description: Arranges buttons side by side with consistent spacing.
@@ -2332,6 +2298,42 @@ _structures:
                   name: Center
                 - id: end
                   name: End
+      - &ref_5
+        label: Accordion
+        icon: expand_all
+        description: Interactive component for showing and hiding content panels.
+        value:
+          _component: building-blocks/wrappers/accordion
+          label: null
+          items: []
+          openFirst: false
+          singleOpen: false
+        preview:
+          text:
+            - key: label
+            - Accordion
+          subtext:
+            - template: An accordion containing {items|array_length} {"item"|pluralize=items}
+            - Add items to the accordion
+        picker_preview:
+          text: Accordion
+          subtext: Interactive component for showing and hiding content panels.
+          icon: expand_all
+        _inputs:
+          label:
+            comment: Optional label for the accordion to help identify it in the editor.
+            type: text
+          items:
+            comment: The items to display in the accordion.
+            type: array
+            options:
+              structures: _structures.accordionItems
+          openFirst:
+            comment: Whether the first item will be open by default.
+            type: switch
+          singleOpen:
+            comment: Whether only one item can be open at a time within this accordion.
+            type: switch
       - &ref_6
         label: Form
         icon: checklist_rtl
@@ -3249,23 +3251,6 @@ _structures:
       - *ref_17
       - *ref_18
       - *ref_19
-  accordionItems:
-    id_key: _component
-    style: modal
-    values:
-      - label: Item
-        icon: place_item
-        value:
-          title: null
-          contentSections: null
-        _inputs:
-          title:
-            comment: The title of the accordion item.
-            type: text
-          contentSections:
-            type: array
-            options:
-              structures: _structures.accordionSections
   cardSections:
     id_key: _component
     style: modal
@@ -3290,7 +3275,7 @@ _structures:
     id_key: _component
     style: modal
     values:
-      - *ref_5
+      - *ref_4
       - *ref_6
       - *ref_7
       - *ref_8
@@ -3305,6 +3290,23 @@ _structures:
       - *ref_17
       - *ref_18
       - *ref_19
+  accordionItems:
+    id_key: _component
+    style: modal
+    values:
+      - label: Item
+        icon: place_item
+        value:
+          title: null
+          contentSections: null
+        _inputs:
+          title:
+            comment: The title of the accordion item.
+            type: text
+          contentSections:
+            type: array
+            options:
+              structures: _structures.accordionSections
   formBlocks:
     id_key: _component
     style: modal
