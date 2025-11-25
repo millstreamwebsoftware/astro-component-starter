@@ -32,11 +32,11 @@ const {
       Array.isArray(slides) &&
         slides.length > 0 &&
         slides.map((slide, index) => (
-          <editable-array-item data-component="page-sections/features/feature-slider/feature-slider-item">
-            <CarouselSlide aria-label={`Slide ${index + 1} of ${slides.length}`}>
+          <CarouselSlide aria-label={`Slide ${index + 1} of ${slides.length}`}>
+            <editable-array-item data-component="page-sections/features/feature-slider/feature-slider-item">
               <FeatureSliderItem {...slide} data-index={index} />
-            </CarouselSlide>
-          </editable-array-item>
+            </editable-array-item>
+          </CarouselSlide>
         ))
     }
   </Carousel>
