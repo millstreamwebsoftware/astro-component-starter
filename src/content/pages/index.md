@@ -2,7 +2,7 @@
 _schema: default
 title: Component Library
 pageSections:
-  - _component: page-sections/heroes/center-hero
+  - _component: page-sections/heroes/hero-center
     eyebrow:
     heading: A Ruthlessly Clean Component Starter for the Web.
     subtext: Built on web fundamentals. Fast to use, fast to ship, and simple to maintain.
@@ -103,7 +103,7 @@ pageSections:
     colorScheme: default
     backgroundColor: base
 
-  - _component: page-sections/ctas/center-cta
+  - _component: page-sections/ctas/cta-center
     heading: Ready to start building?
     subtext: Browse our complete component library and see live examples of every component in action. All components are ready to use and fully customizable.
     buttonSections:

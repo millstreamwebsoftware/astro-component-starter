@@ -1,0 +1,71 @@
+label: Center CTA
+icon: hero
+description: "Centered call-to-action with headline, supporting text, and buttons."
+structures:
+  - pageSections
+value:
+  _component: page-sections/ctas/cta-center
+  heading: "Heading text"
+  subtext: "Subtext placeholder text that will be replaced with actual content."
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: "My Button"
+      link: ""
+      iconName: ""
+      iconPosition: before
+      hideText: false
+      variant: primary
+      size: md
+  colorScheme:
+  backgroundColor: base
+  rounded: false
+preview:
+  text:
+    - key: heading
+    - Center CTA
+  subtext:
+    - key: subtext
+    - Add supporting text
+picker_preview:
+  text: Center CTA
+  subtext: Centered CTA with stacked text and buttons.
+  icon: hero
+_inputs:
+  heading:
+    type: text
+    comment: Headline for the CTA.
+  subtext:
+    type: textarea
+    comment: Supporting copy beneath the headline.
+  buttonSections:
+    type: array
+    comment: Buttons for calls-to-action.
+    options:
+      structures: _structures.buttonSections
+  colorScheme:
+    type: select
+    comment: Color scheme theme for the CTA.
+    options:
+      values:
+        - id: default
+          name: Default
+        - id: contrast
+          name: Contrast
+  backgroundColor:
+    type: select
+    comment: Background color for the CTA.
+    options:
+      values:
+        - id: none
+          name: None
+        - id: base
+          name: Base
+        - id: surface
+          name: Surface
+        - id: accent
+          name: Accent
+        - id: highlight
+          name: Highlight
+  rounded:
+    type: boolean
+    comment: Add rounded corners to the CTA section.

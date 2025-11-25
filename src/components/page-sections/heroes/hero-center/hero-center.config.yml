@@ -1,0 +1,73 @@
+label: Center Hero
+icon: hero
+description: "Centered hero with heading, supporting text, and buttons."
+structures:
+  - pageSections
+value:
+  _component: page-sections/heroes/hero-center
+  eyebrow: "Eyebrow text"
+  heading: "Heading text"
+  subtext: "Subtext placeholder text that will be replaced with actual content."
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: "My Button"
+      link: ""
+      iconName: ""
+      iconPosition: before
+      hideText: false
+      variant: primary
+      size: md
+  colorScheme:
+  backgroundColor: base
+preview:
+  text:
+    - key: heading
+    - Center Hero
+  subtext:
+    - key: eyebrow
+    - Eyebrow
+    - key: subtext
+    - Add subtext to the hero
+picker_preview:
+  text: Center Hero
+  subtext: "Centered hero with heading, subtext, and buttons."
+  icon: hero
+_inputs:
+  eyebrow:
+    type: text
+    comment: Optional label displayed above the hero heading.
+  heading:
+    type: text
+    comment: Main heading text for the hero.
+  subtext:
+    type: textarea
+    comment: Supporting subtext displayed beneath the heading.
+  buttonSections:
+    type: array
+    comment: Button blocks for calls to action.
+    options:
+      structures: _structures.buttonSections
+  colorScheme:
+    type: select
+    comment: Color scheme theme for the hero.
+    options:
+      values:
+        - id: default
+          name: Default
+        - id: contrast
+          name: Contrast
+  backgroundColor:
+    type: select
+    comment: Background color for the hero.
+    options:
+      values:
+        - id: none
+          name: None
+        - id: base
+          name: Base
+        - id: surface
+          name: Surface
+        - id: accent
+          name: Accent
+        - id: highlight
+          name: Highlight

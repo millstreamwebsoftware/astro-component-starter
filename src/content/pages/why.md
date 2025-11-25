@@ -2,7 +2,7 @@
 _schema: default
 title: Why
 pageSections:
-  - _component: page-sections/heroes/split-hero
+  - _component: page-sections/heroes/hero-split
     eyebrow:
     heading: Why this Starter exists
     subtitle: Build websites with small, predictable pieces and only the essentials so everything stays fast and easy to manage.
@@ -124,7 +124,7 @@ pageSections:
     paddingVertical: 4xl
     colorScheme: contrast
     backgroundColor: surface
-  - _component: page-sections/ctas/form-cta
+  - _component: page-sections/ctas/cta-form
     heading: Get in touch
     subtext: Have questions? We'd love to hear from you.
     formAction: "./"
