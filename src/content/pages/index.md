@@ -4,7 +4,7 @@ title: Component Library
 pageSections:
   - _component: page-sections/heroes/hero-center
     eyebrow:
-    heading: CloudCannon Astro Component Library
+    heading: The Astro Component Library for building any sites
     subtext: >-
       Built on web fundamentals. Fast to use, fast to ship, and simple to
       maintain.
