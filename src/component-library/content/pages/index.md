@@ -1,11 +1,11 @@
 ---
-title: "Component Library"
+title: "Astro Component Library"
 contentSections: []
 ---
 
-# Component Library
+# Astro Component Library
 
-Welcome to your component library.
+Welcome to your Astro component library.
 
 Here you’ll find **examples, documentation, and guidelines** for every component in your design system.
 
