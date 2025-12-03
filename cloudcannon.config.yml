@@ -2,7 +2,7 @@ collections_config:
   pages:
     path: src/content/pages
     glob:
-      - '**/*.md'
+      - "**/*.md"
     url: /[full_slug]/
     icon: laptop_mac
     _enabled_editors:
@@ -17,7 +17,7 @@ collections_config:
         path: .cloudcannon/schemas/page.md
         remove_extra_inputs: false
     create:
-      path: '[relative_base_path]/{filename|slugify|lowercase}.md'
+      path: "[relative_base_path]/{filename|slugify|lowercase}.md"
     new_preview_url: /
     _inputs:
       title:
@@ -26,7 +26,7 @@ collections_config:
   blog:
     path: src/content/blog
     glob:
-      - '**/*.mdx'
+      - "**/*.mdx"
     url: /blog/[full_slug]/
     icon: article
     _enabled_editors:
@@ -41,7 +41,7 @@ collections_config:
         path: .cloudcannon/schemas/blog-post.md
         remove_extra_inputs: false
     create:
-      path: '[relative_base_path]/{filename|slugify|lowercase}.mdx'
+      path: "[relative_base_path]/{filename|slugify|lowercase}.mdx"
     new_preview_url: /blog/
     _inputs:
       title:
@@ -65,7 +65,7 @@ collections_config:
   data:
     path: src/data
     glob:
-      - '**/*.json'
+      - "**/*.json"
     icon: database
     _enabled_editors:
       - data
@@ -772,6 +772,8 @@ _select_data:
       name: X Circle
     - id: x-mark
       name: X Mark
+_structures_from_glob:
+  - /.cloudcannon/structures/*.cloudcannon.structures.yml
 _structures:
   navItemLevel1:
     id_key: _component
@@ -840,8 +842,8 @@ _structures:
       - label: Navigation Link
         icon: link
         value:
-          name: ''
-          path: ''
+          name: ""
+          path: ""
         _inputs:
           name:
             type: text
@@ -856,8 +858,8 @@ _structures:
       - label: Social Link
         icon: share
         value:
-          icon: ''
-          link: ''
+          icon: ""
+          link: ""
         _inputs:
           icon:
             type: text
@@ -909,7 +911,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           alignX:
             type: select
             comment: Horizontal alignment of the testimonial content.
@@ -1228,8 +1230,8 @@ _structures:
           buttonSections:
             - _component: building-blocks/core-elements/button
               text: My Button
-              link: ''
-              iconName: ''
+              link: ""
+              iconName: ""
               iconPosition: before
               hideText: false
               variant: primary
@@ -1262,7 +1264,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text for the feature image for accessibility.
@@ -1324,8 +1326,8 @@ _structures:
           buttonSections:
             - _component: building-blocks/core-elements/button
               text: My Button
-              link: ''
-              iconName: ''
+              link: ""
+              iconName: ""
               iconPosition: before
               hideText: false
               variant: primary
@@ -1426,7 +1428,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text describing the image content.
@@ -1517,7 +1519,7 @@ _structures:
                   icon: view_carousel
                   value:
                     _component: page-sections/features/feature-slider/feature-slider-item
-                    eyebrow: ''
+                    eyebrow: ""
                     title: Slide title
                     description: Short description for this slide.
                     imageSource: /src/assets/images/component-library/sunset.jpg
@@ -1546,7 +1548,7 @@ _structures:
                       options:
                         paths:
                           uploads: src/assets/images
-                          static: ''
+                          static: ""
                     imageAlt:
                       type: text
                       comment: Alt text describing the slide image.
@@ -1589,8 +1591,8 @@ _structures:
           buttonSections:
             - _component: building-blocks/core-elements/button
               text: My Button
-              link: ''
-              iconName: ''
+              link: ""
+              iconName: ""
               iconPosition: before
               hideText: false
               variant: primary
@@ -1621,7 +1623,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text describing the CTA image.
@@ -1816,7 +1818,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text describing the CTA image.
@@ -1857,8 +1859,8 @@ _structures:
           buttonSections:
             - _component: building-blocks/core-elements/button
               text: My Button
-              link: ''
-              iconName: ''
+              link: ""
+              iconName: ""
               iconPosition: before
               hideText: false
               variant: primary
@@ -1919,7 +1921,7 @@ _structures:
         description: Used to group and style large sections of a page.
         value:
           _component: page-sections/builders/custom-section
-          label: ''
+          label: ""
           contentSections: []
           maxContentWidth: 2xl
           paddingHorizontal: md
@@ -1927,8 +1929,8 @@ _structures:
           colorScheme: null
           backgroundColor: base
           backgroundImage:
-            source: ''
-            alt: ''
+            source: ""
+            alt: ""
             positionVertical: top
             positionHorizontal: center
           rounded: false
@@ -2055,7 +2057,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           backgroundImage.alt:
             comment: Alt text for the background image.
             type: textarea
@@ -2122,7 +2124,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text describing the team member photo.
@@ -2256,7 +2258,7 @@ _structures:
         description: Two-column layout for side-by-side content.
         value:
           _component: building-blocks/wrappers/split
-          label: ''
+          label: ""
           firstColumnContentSections: []
           secondColumnContentSections: []
           distributionMode: half
@@ -2355,7 +2357,7 @@ _structures:
         description: Arranges content into a grid that adapts to screen size.
         value:
           _component: building-blocks/wrappers/grid
-          label: ''
+          label: ""
           layout: center
           minItemWidth: 280
           maxItemWidth: 400
@@ -2421,7 +2423,7 @@ _structures:
         description: Lets users switch between different content panels using tabs.
         value:
           _component: building-blocks/wrappers/content-selector
-          label: ''
+          label: ""
           items: []
           navigationPosition: start
         preview:
@@ -2455,7 +2457,7 @@ _structures:
         description: Displays multiple items in a sliding gallery.
         value:
           _component: building-blocks/wrappers/carousel
-          label: ''
+          label: ""
           slides: []
           autoPlay: false
           autoScroll: false
@@ -2540,13 +2542,13 @@ _structures:
           beforeContentSections:
             type: array
             comment: Content that appears above the main card area, without padding.
-            hidden: '!showBeforeAfter'
+            hidden: "!showBeforeAfter"
             options:
               structures: _structures.cardSections
           afterContentSections:
             type: array
             comment: Content that appears below the main card area, without padding.
-            hidden: '!showBeforeAfter'
+            hidden: "!showBeforeAfter"
             options:
               structures: _structures.cardSections
           maxContentWidth:
@@ -2649,7 +2651,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           backgroundImage.alt:
             comment: Alt text for the background image.
             type: text
@@ -2799,10 +2801,10 @@ _structures:
         value:
           _component: building-blocks/core-elements/video
           type: youtube
-          id: ''
-          title: ''
-          source: ''
-          thumbnail: ''
+          id: ""
+          title: ""
+          source: ""
+          thumbnail: ""
         preview:
           text:
             - template: Video - {type}
@@ -2860,7 +2862,7 @@ _structures:
           text: My testimonial text.
           authorName: Charlie Parker
           authorDescription: Author
-          authorImage: ''
+          authorImage: ""
           alignX: start
         preview:
           text:
@@ -2899,7 +2901,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           alignX:
             comment: The horizontal alignment of the testimonial.
             type: select
@@ -3063,8 +3065,8 @@ _structures:
         description: Optimized image component for local and remote sources.
         value:
           _component: building-blocks/core-elements/image
-          source: ''
-          alt: ''
+          source: ""
+          alt: ""
           rounded: false
           aspectRatio: none
           positionVertical: center
@@ -3086,7 +3088,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           alt:
             type: textarea
             comment: Alternative text for accessibility.
@@ -3381,8 +3383,8 @@ _structures:
         description: Responsive wrapper for third-party embeds.
         value:
           _component: building-blocks/core-elements/embed
-          source: ''
-          title: ''
+          source: ""
+          title: ""
           aspectRatio: landscape
         preview:
           text:
@@ -3500,7 +3502,7 @@ _structures:
           text:
             - Counter
           subtext:
-            - template: '{prefix}{number}{suffix}'
+            - template: "{prefix}{number}{suffix}"
         picker_preview:
           text: Counter
           subtext: Animated counter for highlighting key stats or figures.
@@ -3841,7 +3843,7 @@ _structures:
           iconPosition:
             type: select
             comment: The position of the icon relative to the text.
-            hidden: '!iconName'
+            hidden: "!iconName"
             options:
               values:
                 - id: before
@@ -3851,7 +3853,7 @@ _structures:
           hideText:
             type: switch
             comment: Whether to hide the button text and show only the icon.
-            hidden: '!iconName'
+            hidden: "!iconName"
           disabled:
             type: switch
             comment: Whether the submit button is disabled.
@@ -4009,14 +4011,14 @@ _structures:
         description: Hidden form field for storing data.
         value:
           _component: building-blocks/forms/hidden
-          name: ''
-          value: ''
+          name: ""
+          value: ""
         preview:
           text:
             - Hidden
           subtext:
             - key: text
-            - ''
+            - ""
         picker_preview:
           text: Hidden
           subtext: Hidden form field for storing data.
@@ -4074,7 +4076,7 @@ _structures:
           label: My date
           name: my_date
           required: false
-          value: '2026-01-01T15:30:00'
+          value: "2026-01-01T15:30:00"
           min: null
           max: null
         preview:
@@ -4256,8 +4258,8 @@ _structures:
     values:
       - label: List Item
         value:
-          text: ''
-          iconName: ''
+          text: ""
+          iconName: ""
           iconColor: default
         preview:
           icon: text_fields
@@ -4318,8 +4320,8 @@ _structures:
     values:
       - label: Definition List Item
         value:
-          title: ''
-          text: ''
+          title: ""
+          text: ""
         preview:
           icon: list
           text:
@@ -4334,86 +4336,3 @@ _structures:
           text:
             type: textarea
             comment: The text content of the list item.
-  buttonSections:
-    id_key: _component
-    style: modal
-    values:
-      - label: Button
-        icon: variables
-        description: Clickable button for calls-to-action and navigation.
-        value:
-          _component: building-blocks/core-elements/button
-          text: My Button
-          link: ''
-          iconName: ''
-          iconPosition: before
-          hideText: false
-          variant: primary
-          size: md
-        preview:
-          text:
-            - Button
-          subtext:
-            - key: text
-        picker_preview:
-          text: Button
-          subtext: Clickable button for calls-to-action and navigation.
-          icon: variables
-        _inputs:
-          text:
-            type: text
-            comment: The text that goes inside the button.
-            hidden: hideText
-          link:
-            type: url
-            comment: The URL to which the button should link.
-          iconName:
-            type: select
-            comment: The name of the icon to display. See the Icon component documentation for more information.
-            options:
-              values: _select_data.icons
-              preview:
-                text:
-                  - key: name
-                image:
-                  - template: src/icons/{id}.svg
-          iconPosition:
-            type: select
-            comment: The position of the icon relative to the text.
-            hidden: '!iconName'
-            options:
-              values:
-                - id: before
-                  name: Before
-                - id: after
-                  name: After
-          hideText:
-            type: switch
-            hidden: '!iconName'
-            comment: Whether to hide the button text and show only the icon.
-          variant:
-            type: select
-            comment: The presentation of button.
-            options:
-              values:
-                - id: primary
-                  name: Primary
-                - id: secondary
-                  name: Secondary
-                - id: tertiary
-                  name: Tertiary
-                - id: ghost
-                  name: Ghost
-                - id: text
-                  name: Text
-          size:
-            type: select
-            comment: The size of the button.
-            options:
-              values:
-                - id: sm
-                  name: Small
-                - id: md
-                  name: Medium
-                - id: lg
-                  name: Large
