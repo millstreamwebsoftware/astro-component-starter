@@ -28,21 +28,33 @@ const {
 >
   {
     eyebrow && (
-      <SimpleText alignX="center" class="eyebrow">
+      <SimpleText alignX="center" class="eyebrow" data-prop="eyebrow">
         {eyebrow}
       </SimpleText>
     )
   }
   {
     heading && (
-      <Heading level="h2" size="lg" alignX="center" style="margin-bottom: var(--spacing-sm);" data-prop="heading">
+      <Heading
+        level="h2"
+        size="lg"
+        alignX="center"
+        style="margin-bottom: var(--spacing-sm);"
+        data-prop="heading"
+      >
         {heading}
       </Heading>
     )
   }
   {
     subtext && (
-      <SimpleText class="team-grid-subtext" size="md" alignX="center" style="margin-top: 0;">
+      <SimpleText
+        class="team-grid-subtext"
+        size="md"
+        alignX="center"
+        style="margin-top: 0;"
+        data-prop="subtext"
+      >
         {subtext}
       </SimpleText>
     )

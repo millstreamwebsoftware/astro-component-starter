@@ -35,7 +35,13 @@ const hasImage = Boolean(imageSource);
     verticalAlignment="center"
   >
     <Fragment slot="first">
-      {eyebrow && <SimpleText class="eyebrow">{eyebrow}</SimpleText>}
+      {
+        eyebrow && (
+          <SimpleText class="eyebrow" data-prop="eyebrow">
+            {eyebrow}
+          </SimpleText>
+        )
+      }
       {
         title && (
           <Heading level="h2" size="lg" style="margin-top: 0;" data-prop="title">
@@ -43,7 +49,13 @@ const hasImage = Boolean(imageSource);
           </Heading>
         )
       }
-      {description && <SimpleText size="md">{description}</SimpleText>}
+      {
+        description && (
+          <SimpleText size="md" data-prop="description">
+            {description}
+          </SimpleText>
+        )
+      }
     </Fragment>
     {
       hasImage && (

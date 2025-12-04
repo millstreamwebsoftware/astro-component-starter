@@ -46,7 +46,13 @@ const featureSplitId = `feature-split-${crypto.randomUUID()}`;
     gap="2xl"
   >
     <Fragment slot="first">
-      {eyebrow && <SimpleText class="eyebrow">{eyebrow}</SimpleText>}
+      {
+        eyebrow && (
+          <SimpleText class="eyebrow" data-prop="eyebrow">
+            {eyebrow}
+          </SimpleText>
+        )
+      }
       {
         heading && (
           <Heading level="h2" size="lg" data-prop="heading">
@@ -56,7 +62,7 @@ const featureSplitId = `feature-split-${crypto.randomUUID()}`;
       }
       {
         subtext && (
-          <SimpleText class="subtext" size="md">
+          <SimpleText class="subtext" size="md" data-prop="subtext">
             {subtext}
           </SimpleText>
         )

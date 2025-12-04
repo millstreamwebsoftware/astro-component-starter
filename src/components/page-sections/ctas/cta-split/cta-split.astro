@@ -48,7 +48,13 @@ const {
           </Heading>
         )
       }
-      {subtext && <SimpleText size="md">{subtext}</SimpleText>}
+      {
+        subtext && (
+          <SimpleText size="md" data-prop="subtext">
+            {subtext}
+          </SimpleText>
+        )
+      }
       {
         buttonSections?.length > 0 && (
           <ButtonGroup
