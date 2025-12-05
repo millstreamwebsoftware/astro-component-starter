@@ -47,6 +47,8 @@ _inputs:
         subscript: true
         superscript: true
         underline: false
+        bulletedlist: false
+        numberedlist: false
   buttonSections:
     type: array
     comment: Button blocks for calls to action.
