@@ -37,18 +37,17 @@ _inputs:
     type: markdown
     comment: Supporting subtext displayed beneath the heading.
     options:
-      options:
-        blockquote: false
-        bold: true
-        format: p
-        italic: true
-        link: true
-        strike: false
-        subscript: true
-        superscript: true
-        underline: false
-        bulletedlist: false
-        numberedlist: false
+      blockquote: false
+      bold: true
+      format: p
+      italic: true
+      link: true
+      strike: false
+      subscript: true
+      superscript: true
+      underline: false
+      bulletedlist: false
+      numberedlist: false
   buttonSections:
     type: array
     comment: Button blocks for calls to action.

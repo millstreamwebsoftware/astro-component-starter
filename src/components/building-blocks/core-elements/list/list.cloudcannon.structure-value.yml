@@ -89,6 +89,8 @@ _structures:
               subscript: true
               superscript: true
               underline: false
+              bulletedlist: false
+              numberedlist: false
           iconName:
             type: select
             comment: The name of the icon to display from the icon library.

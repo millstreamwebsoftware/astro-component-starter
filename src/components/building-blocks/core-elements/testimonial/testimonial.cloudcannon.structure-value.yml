@@ -31,6 +31,8 @@ _inputs:
       subscript: true
       superscript: true
       underline: false
+      bulletedlist: false
+      numberedlist: false
   authorName:
     comment: The person to whom you're attributing the quotation.
     type: textarea

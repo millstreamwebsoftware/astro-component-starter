@@ -20,13 +20,13 @@ _inputs:
     type: markdown
     options:
       blockquote: false
-        bold: true
-        italic: true
-        link: true
-        strike: false
-        subscript: true
-        superscript: true
-        underline: false
+      bold: true
+      italic: true
+      link: true
+      strike: false
+      subscript: true
+      superscript: true
+      underline: false
   alignX:
     type: select
     options:
