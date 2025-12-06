@@ -91,5 +91,5 @@ _inputs:
         - id: highlight
           name: Highlight
   rounded:
-    type: boolean
+    type: switch
     comment: Add rounded corners to the CTA section.
