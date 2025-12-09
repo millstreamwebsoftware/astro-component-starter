@@ -9,10 +9,12 @@ pageSections:
       I’m a big fan of the static web. And I love what the Astro team is making!
       For the last couple of years I’ve been watching agencies and dev teams
       rebuild the same patterns in every project — carousels, page hero
-      sections, accordions — often starting from scratch each time. So with help
-      from a bunch of people at CloudCannon I’ve built a component library for
-      Astro that outputs static HTML and CSS, for the fastest delivery possible
-      —&nbsp;all unbranded and adaptable for any project.
+      sections, accordions — often starting from scratch each time.
+
+
+      With help from a bunch of people at CloudCannon I’ve built a component
+      library for Astro that outputs static HTML and CSS, for the fastest
+      delivery possible —&nbsp;all unbranded and adaptable for any project.
     imageSource: /src/assets/images/component-library/sunset.jpg
     imageAlt: Sunset
     imageAspectRatio: portrait
@@ -22,16 +24,13 @@ pageSections:
     backgroundColor: base
     paddingVertical: 4xl
   - _component: page-sections/features/feature-slider
-    eyebrow: Why Carousel
-    heading: Why this approach works
-    subtext: Highlight the core reasons in a simple, swipeable format.
     slides:
       - _component: page-sections/features/feature-slider/feature-slider-item
         eyebrow: Speed
         title: High performance
         description: >-
           Great performance starts with what you choose not to load. The
-          component starter keeps everything lean with simple HTML, CSS, and
+          component library keeps everything lean with simple HTML, CSS, and
           vanilla JavaScript, plus built-in tools that squeeze every drop of
           performance out of your images.
         imageSource: /src/assets/images/component-library/quiet-street.jpg
@@ -42,7 +41,7 @@ pageSections:
         title: Easy maintenance
         description: >-
           Maintaining a site is easier when the pieces stay small and
-          predictable. With the component starter, you build on top of highly
+          predictable. With the component library, you build on top of highly
           polished building blocks that stay clear, focused, and easy to work
           with as your site grows.
         imageSource: /src/assets/images/component-library/sheep.jpg
@@ -72,14 +71,16 @@ pageSections:
         minSplitWidth: 0
     colorScheme: contrast
     backgroundColor: surface
+    eyebrow: Why Carousel
+    heading: Why this approach works
+    subtext: Highlight the core reasons in a simple, swipeable format.
     paddingVertical: 4xl
   - _component: page-sections/people/testimonial-section
     text: >-
-      This component library has completely changed the way I build Astro sites.
-      The sites come together fast, they run even faster, and the whole process
-      feels effortless. I couldn't be happier with the results.
-    authorName: Mike Neumegen
-    authorDescription: CEO, CloudCannon
+      This testimonial component has completely changed the way I present my
+      quotations on Astro sites. I couldn't be happier with the results.
+    authorName: John Convincingname
+    authorDescription: Founder
     authorImage: /src/assets/images/component-library/profile.jpg
     alignX: center
     maxContentWidth: xl
@@ -89,11 +90,11 @@ pageSections:
     backgroundColor: surface
   - _component: page-sections/people/team-grid
     eyebrow: Our Team
-    heading: Meet the People
-    subtext: We're a group of faces that fill out this team grid.
+    heading: Meet the people
+    subtext: We're a group of stock photography faces that fill out this team grid.
     teamMembers:
       - _component: page-sections/people/team-grid/team-item
-        name: Mike Neumegen
+        name: 'Alex Smith '
         role: Lead Developer
         bio: >-
           Alex brings over 15 years of leadership experience and a vision for
@@ -128,7 +129,7 @@ pageSections:
     backgroundColor: surface
     paddingVertical: 2xl
   - _component: page-sections/info-blocks/faq-section
-    heading: Frequently Asked Questions
+    heading: Frequently asked questions
     headingLevel: h2
     headingSize: lg
     singleOpen: true
@@ -137,45 +138,40 @@ pageSections:
       - _component: building-blocks/wrappers/accordion/accordion-item
         title: How does the component library work?
         contentSections:
-          - _component: building-blocks/core-elements/simple-text
+          - _component: building-blocks/core-elements/text
             text: >-
-              The framework gives you straightforward building blocks without
-              hiding anything behind layers of abstraction. You see what's
-              happening and you stay in control.
-            size: md
+              We give you straightforward building blocks without hiding
+              anything behind layers of abstraction. You see everything that's
+              happening, and stay in control.
       - _component: building-blocks/wrappers/accordion/accordion-item
-        title: What's included in the component lirbary?
+        title: What's included in the component library?
         contentSections:
-          - _component: building-blocks/core-elements/simple-text
+          - _component: building-blocks/core-elements/text
             text: >-
               Lean HTML, CSS, and small touches of vanilla JavaScript. No dead
               weight, no surprise dependencies, just the pieces you actually
               need to build great pages.
-            size: md
       - _component: building-blocks/wrappers/accordion/accordion-item
         title: How is the component library so fast?
         contentSections:
-          - _component: building-blocks/core-elements/simple-text
+          - _component: building-blocks/core-elements/text
             text: >-
               Performance comes from keeping things lightweight. The framework
               handles image optimization and responsive patterns so your site
               stays quick without extra work.
-            size: md
       - _component: building-blocks/wrappers/accordion/accordion-item
-        title: How can I make the component library my own?
+        title: Can I customize the component library?
         contentSections:
-          - _component: building-blocks/core-elements/simple-text
+          - _component: building-blocks/core-elements/text
             text: >-
               Every part of the component starter is meant to be opened, read,
               and edited. You shape it to fit your project instead of working
               around someone else's opinions.
-            size: md
     maxContentWidth: xl
     paddingHorizontal: xl
     paddingVertical: 4xl
     colorScheme: contrast
-    backgroundColor: surface
-    label: About FAQ
+    backgroundColor: base
   - _component: page-sections/ctas/cta-form
     heading: Get in touch
     subtext: Have questions? We'd love to hear from you.
