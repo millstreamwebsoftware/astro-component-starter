@@ -779,7 +779,7 @@ _structures_from_glob:
   - /.cloudcannon/structures/*.cloudcannon.structures.yml
 _snippets:
   Button:
-    snippet: "<Button [[button_args]]>[[button_content]]</Button>"
+    snippet: "<Button [[button_args]] />"
     params:
       button_args:
         parser: key_values
@@ -799,21 +799,6 @@ _snippets:
             root_pair_delimiter:
               - " "
             allow_booleans: true
-          style:
-            output: inline
-            inline:
-              leading: " "
-              trailing: ""
-      button_content:
-        parser: optional
-        options:
-          parser: content
-          options:
-            editor_key: text
-            forbidden_tokens:
-              - "<"
-            style:
-              output: inline
     _inputs:
       text:
         type: text
