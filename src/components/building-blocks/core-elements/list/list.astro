@@ -36,12 +36,7 @@ const arrayDataAttributes = editable
     items && items.length > 0 ? (
       items.map((item: any) => (
         <editable-array-item data-component="building-blocks/core-elements/list/list-item">
-          <ListItem
-            text={item.text}
-            iconName={item.iconName}
-            iconColor={item.iconColor}
-            editable={false}
-          />
+          <ListItem {...item} editable={editable} />
         </editable-array-item>
       ))
     ) : (
