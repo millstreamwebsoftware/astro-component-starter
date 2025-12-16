@@ -28,7 +28,7 @@ let heroSections: any[] = [];
 try {
   const pages = await getCollection("pages");
 
-  blogPage = pages.find((page: any) => page.slug === "blog");
+  blogPage = pages.find((page: any) => page.id === "blog");
 
   if (blogPage?.data?.pageSections) {
     heroSections = blogPage.data.pageSections;

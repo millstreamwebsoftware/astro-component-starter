@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   pages.forEach((page) => {
     if (page.id === "index") {
       paths.push({
-        params: { slug: "" },
+        params: { slug: undefined },
         props: { page },
       });
     } else {

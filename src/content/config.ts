@@ -64,6 +64,7 @@ const docsComponentSchema = z.object({
 });
 
 const pagesCollection = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
   schema: pageSchema,
 });
 
