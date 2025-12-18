@@ -33,19 +33,26 @@ const alignMap = {
 } as const;
 
 const alignClass = alignMap[alignX as keyof typeof alignMap] ?? "align-start";
+
+const hasButtonSections = buttonSections && buttonSections.length > 0;
+const hasSlot = Astro.slots.has("default");
+
+if (!hasButtonSections && !hasSlot) {
+  return;
+}
 ---
 
 <div
   class:list={["button-group", direction === "column" ? "column" : "row", alignClass, className]}
   {...htmlAttributes}
 >
-  {
-    buttonSections && buttonSections.length > 0 ? (
-      <Component contentSections={buttonSections} editable={editable} propName="buttonSections" />
-    ) : (
-      <slot />
-    )
-  }
+  <slot>
+    {
+      buttonSections && buttonSections.length > 0 && (
+        <Component contentSections={buttonSections} editable={editable} propName="buttonSections" />
+      )
+    }
+  </slot>
 </div>
 
 <style lang="pcss">

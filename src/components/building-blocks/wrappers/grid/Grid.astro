@@ -48,6 +48,13 @@ const arrayDataAttributes = editable
       "data-id-key": "_component",
     }
   : {};
+
+const hasItems = items && items.length > 0;
+const hasSlot = Astro.slots.has("default");
+
+if (!hasItems && !hasSlot) {
+  return;
+}
 ---
 
 <div
@@ -56,17 +63,17 @@ const arrayDataAttributes = editable
   style={gridStyles}
   {...htmlAttributes}
 >
-  {
-    items && items.length > 0 ? (
-      items.map((item: any) => (
-        <editable-array-item data-component="building-blocks/wrappers/grid/grid-item">
-          <GridItem class:list={`layout-${layout}`} contentSections={item.contentSections} />
-        </editable-array-item>
-      ))
-    ) : (
-      <slot />
-    )
-  }
+  <slot>
+    {
+      items &&
+        items.length > 0 &&
+        items.map((item: any) => (
+          <editable-array-item data-component="building-blocks/wrappers/grid/grid-item">
+            <GridItem class:list={`layout-${layout}`} contentSections={item.contentSections} />
+          </editable-array-item>
+        ))
+    }
+  </slot>
 </div>
 
 <style lang="pcss">

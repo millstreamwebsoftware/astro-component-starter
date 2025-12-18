@@ -24,6 +24,13 @@ const arrayDataAttributes = editable
       "data-id-key": "_component",
     }
   : {};
+
+const hasItems = items && items.length > 0;
+const hasSlot = Astro.slots.has("default");
+
+if (!hasItems && !hasSlot) {
+  return;
+}
 ---
 
 <ul
@@ -32,22 +39,22 @@ const arrayDataAttributes = editable
   {...arrayDataAttributes}
   {...htmlAttributes}
 >
-  {
-    items ? (
-      items.map((item: any) => (
-        <editable-array-item data-component="building-blocks/core-elements/list/list-item">
-          <ListItem
-            text={item.text}
-            iconName={item.iconName}
-            iconColor={item.iconColor}
-            editable={editable}
-          />
-        </editable-array-item>
-      ))
-    ) : (
-      <slot />
-    )
-  }
+  <slot>
+    {
+      items &&
+        items.length > 0 &&
+        items.map((item: any) => (
+          <editable-array-item data-component="building-blocks/core-elements/list/list-item">
+            <ListItem
+              text={item.text}
+              iconName={item.iconName}
+              iconColor={item.iconColor}
+              editable={editable}
+            />
+          </editable-array-item>
+        ))
+    }
+  </slot>
 </ul>
 
 <style lang="pcss">

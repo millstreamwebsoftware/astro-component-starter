@@ -28,21 +28,30 @@ const contentDataAttributes =
         "data-prop": customDataPropContent,
       }
     : {};
+
+const hasTitle = title && title.trim().length > 0;
+const hasTitleSlot = Astro.slots.has("title");
+const hasText = text && text.trim().length > 0;
+const hasSlot = Astro.slots.has("default");
+
+if ((!hasTitle && !hasTitleSlot) || (!hasText && !hasSlot)) {
+  return;
+}
 ---
 
 <dt class:list={["title", className]} role="term" {...titleDataAttributes} {...htmlAttributes}>
-  {title ? <span {...titleDataAttributes}>{title}</span> : <slot name="title" />}
+  <span {...titleDataAttributes}>
+    <slot name="title">
+      {title}
+    </slot>
+  </span>
 </dt>
 <dd class:list={["content", className]} role="definition" {...htmlAttributes}>
-  {
-    text ? (
-      <span {...contentDataAttributes}>{text}</span>
-    ) : (
-      <span {...contentDataAttributes}>
-        <slot />
-      </span>
-    )
-  }
+  <span {...contentDataAttributes}>
+    <slot>
+      {text}
+    </slot>
+  </span>
 </dd>
 
 <style lang="pcss">

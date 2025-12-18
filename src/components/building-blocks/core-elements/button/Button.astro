@@ -35,6 +35,14 @@ if (hideText && !htmlAttributes["aria-label"]) {
 const Tag = element as any;
 
 const tagProps = Tag === "a" && link ? { href: link } : Tag === "button" ? { type: "button" } : {};
+
+const hasText = text && text.trim().length > 0;
+const hasSlot = Astro.slots.has("default");
+const hasIcon = iconName && iconName.trim().length > 0;
+
+if (!hasText && !hasSlot && !hasIcon) {
+  return;
+}
 ---
 
 <Tag
@@ -49,11 +57,11 @@ const tagProps = Tag === "a" && link ? { href: link } : Tag === "button" ? { typ
   {...tagProps}
   {...htmlAttributes}
 >
-  {iconName && <Icon name={iconName} size="none" />}
+  <Icon name={iconName} size="none" />
   {
     !hideText && (
       <span class="label-text" {...textDataAttributes}>
-        {text ? text : <slot />}
+        <slot>{text}</slot>
       </span>
     )
   }
