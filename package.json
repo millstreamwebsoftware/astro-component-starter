@@ -1,16 +1,16 @@
 {
   "name": "@millstreamwebsoftware/astro-component-starter",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "exports": {
+    "./core/embed": "./src/components/building-blocks/core-elements/embed/Embed.astro",
     "./core/button": "./src/components/building-blocks/core-elements/button/Button.astro",
     "./core/counter": "./src/components/building-blocks/core-elements/counter/Counter.astro",
     "./core/definition-list": "./src/components/building-blocks/core-elements/definition-list/DefinitionList.astro",
     "./core/divider": "./src/components/building-blocks/core-elements/divider/Divider.astro",
-    "./core/embed": "./src/components/building-blocks/core-elements/embed/Embed.astro",
     "./core/heading": "./src/components/building-blocks/core-elements/heading/Heading.astro",
     "./core/icon": "./src/components/building-blocks/core-elements/icon/Icon.astro",
     "./core/image": "./src/components/building-blocks/core-elements/image/AstroImage.astro",
