@@ -1,4 +1,3 @@
 *
-!src/components/**/*.astro
-!src/components/**/*.cloudcannon.*.yml
+!src/components/building-blocks/core-elements/video/**
 !package.json

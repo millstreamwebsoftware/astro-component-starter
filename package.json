@@ -1,15 +1,12 @@
 {
   "name": "@millstreamwebsoftware/astro-component-starter",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "exports": {
-    "./video": "./src/components/building-blocks/core-elements/video/Video.astro",
-    "./video/cloudcannon": "./src/components/building-blocks/core-elements/video/video.cloudcannon.snippets.yml",
-    "./embed": "./src/components/building-blocks/core-elements/embed/Embed.astro",
-    "./embed/cloudcannon": "./src/components/building-blocks/core-elements/embed/embed.cloudcannon.snippets.yml"
+    "./video": "./src/components/building-blocks/core-elements/video/Video.astro"
   },
   "description": "A modern design system built with Astro, featuring design tokens, components, and comprehensive documentation",
   "keywords": [
